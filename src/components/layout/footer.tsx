@@ -114,9 +114,6 @@ export default function Footer() {
                         {formatMessage({ id: 'products' })}
                     </Typography>
                     <Typography variant="l2r">
-                        {formatMessage({ id: 'xafshop' })}
-                    </Typography>
-                    <Typography variant="l2r">
                         {formatMessage({ id: 'xafpay' })}
                     </Typography>
                 </Box>
