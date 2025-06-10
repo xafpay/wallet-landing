@@ -2,17 +2,13 @@
   "compilerOptions": {
     "target": "ES2017",
     "baseUrl": "src/",
-    "paths":{
+    "paths": {
       "@components": ["components/*"],
       "@xafpay/types": ["libs/types/index.ts"],
       "@xafpay/theme": ["libs/theme/index.ts"],
-      "@xafpay/shared": ["libs/shared/index.ts"],
+      "@xafpay/shared": ["libs/shared/index.ts"]
     },
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -24,19 +20,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "types": ["react", "node"],
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

@@ -1,4 +1,4 @@
-import { Reducer, useContext, useReducer } from 'react';
+import React, { Reducer, useContext, useReducer } from 'react';
 import ModeContext from './ModeContext';
 
 import {
@@ -25,7 +25,7 @@ const modeReducer: Reducer<IMode, Action> = (state: State, action: Action) => {
 
 function ModeContextProvider({
   children,
-}: ModeContextProviderProps): JSX.Element {
+}: ModeContextProviderProps): React.ReactElement {
   const initialState: IMode = {
     activeMode: 'light',
     modeDispatch: () => null,

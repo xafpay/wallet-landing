@@ -1,5 +1,5 @@
 export interface ModeContextProviderProps {
-  children: JSX.Element;
+  children: React.ReactElement;
 }
 
 export type ModeType = 'light' | 'dark';
