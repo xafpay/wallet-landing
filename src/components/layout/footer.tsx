@@ -106,6 +106,7 @@ export default function Footer() {
                     display: 'grid',
                     textAlign: 'left',
                     alignItems: 'start',
+                    height: 'fit-content'
                 }}>
                     <Typography
                         variant="h3"
