@@ -1,4 +1,3 @@
-// TODO: Clean up duplicate type in workspace /apps/customer-web/api/types/currencyTypes
 /**
  * Entity representing a currency.
  */
