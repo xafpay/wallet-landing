@@ -18,6 +18,6 @@ export const useCurrencies = () => {
   });
   const { isError, error } = tt;
   //TODO: USE alert in case of error. will be replaced with proper notifications later
-  if (isError) console.error(error.message);
+  if (isError) alert(error.message);
   return tt;
 };
