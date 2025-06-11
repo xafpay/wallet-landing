@@ -118,7 +118,7 @@ export default function Functionnalities() {
                                 alignItems: 'flex-start',
                                 textAlign: 'left',
                                 padding: theme.spacing(1.5, 3),
-                                fontFamily: 'Darker Grotesk',
+                                fontFamily: 'Darker Grotesque',
                                 fontSize: '24px',
                                 lineHeight: '125%',
                                 '&.Mui-selected': {

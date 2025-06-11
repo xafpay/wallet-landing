@@ -58,7 +58,8 @@ export default function TrustSection() {
                                 alt="speed" width={150}
                                 height={100}
                                 style={{
-                                    justifySelf: 'center'
+                                    justifySelf: 'center',
+                                    objectFit: 'contain',
                                 }}
                             />
                             <Typography
