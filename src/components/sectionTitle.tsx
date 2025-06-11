@@ -3,10 +3,12 @@ import { Typography } from '@mui/material';
 interface SectionTitleProps {
     children: string;
     color: string;
+    width?: string
 }
 export default function SectionTitle({
     children,
-    color
+    color,
+    width = "60%"
 }: SectionTitleProps) {
     return (
         <Typography
@@ -17,7 +19,7 @@ export default function SectionTitle({
                 fontSize: { tablet: '48px', mobile: '36px' },
                 lineHeight: '120%',
                 color: color,
-                width: { tablet: '60%', mobile: '90%' },
+                width: { tablet: width, mobile: '90%' },
                 justifySelf: 'center',
                 paddingTop: 7.5,
             }}

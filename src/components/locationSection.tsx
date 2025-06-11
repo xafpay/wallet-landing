@@ -22,7 +22,7 @@ export default function LocationSection() {
                 display: 'grid',
                 rowGap: 1
             }}>
-                <SectionTitle color="white">
+                <SectionTitle color="white" width="90%">
                     {formatMessage({ id: 'HeroRemittanceMessage' })}
                 </SectionTitle>
                 <Typography variant="h3" >
