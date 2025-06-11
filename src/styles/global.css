@@ -11,9 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif !important;
-  font-family: 'Space Grotesk', sans-serif !important;
-  font-family: 'Darker Grotesque', sans-serif !important;
+  font-family: 'Poppins', 'Space Grotesk', 'Darker Grotesque', sans-serif !important;
   background-color: var(--color-background);
 }
 
