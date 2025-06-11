@@ -1,5 +1,7 @@
+import React from 'react';
+
 export interface LanguageContextProviderProps {
-  children: JSX.Element;
+  children: React.ReactElement;
 }
 
 export type LanguageType = 'En' | 'Fr';

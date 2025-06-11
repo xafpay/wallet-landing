@@ -26,12 +26,13 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-intl": "^7.1.11",
-    "react-toastify": "^11.0.5",
-    "sass": "^1.89.1"
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
-    "@types/react": "19.1.6",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.6",
     "eslint-config-next": "15.3.3",
+    "sass": "^1.89.2",
     "typescript": "5.8.3"
   }
 }

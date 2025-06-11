@@ -1,4 +1,4 @@
-import { Reducer, useContext, useReducer } from 'react';
+import React, { Reducer, useContext, useReducer } from 'react';
 import LanguageContext from './languageContext';
 
 import {
@@ -26,7 +26,7 @@ const languageReducer: Reducer<Language, Action> = (
 
 function LanguageContextProvider({
   children,
-}: LanguageContextProviderProps): JSX.Element {
+}: LanguageContextProviderProps): React.ReactElement {
   const initialState: Language = {
     activeLanguage: 'En',
     languageDispatch: () => null,

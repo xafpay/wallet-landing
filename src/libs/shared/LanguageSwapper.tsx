@@ -47,8 +47,8 @@ export function LanguageSwapper() {
                     <img
                         loading="lazy"
                         width="20"
-                        src={`https://flagcdn.com/w20/${key === 'En' ? 'gb' : key.toLowerCase()}.png`}
-                        srcSet={`https://flagcdn.com/w40/${key === 'En' ? 'gb' : key.toLowerCase()}.png 2x`}
+                        src={`https://flagcdn.com/w20/${key === 'En' ? 'us' : key.toLowerCase()}.png`}
+                        srcSet={`https://flagcdn.com/w40/${key === 'En' ? 'us' : key.toLowerCase()}.png 2x`}
                         alt=""
                         style={{ marginRight: '10px' }}
                     />

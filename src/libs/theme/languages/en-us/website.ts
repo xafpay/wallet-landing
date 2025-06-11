@@ -195,7 +195,7 @@ export const website = {
   preferredLanguage: 'Preferred Language',
   noAccounts: 'No accounts',
   english: 'English',
-  french: 'Français',
+  french: 'French',
   german: 'Deutsch',
   partnerTermsAndConditions: 'Partner Terms and Conditions',
   transactionDetails: 'Transaction Details',
@@ -303,4 +303,5 @@ export const website = {
   securePayment: 'Secure payment',
   recipientHistory: 'Recipient history',
   faSecurity: 'Secured by 2FA',
+  termsOfService: 'Terms of Service',
 };
