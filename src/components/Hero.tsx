@@ -68,7 +68,7 @@ export default function Hero() {
         handleClose={() => setCurrencyAnchorEl(null)}
         open={!!currencyAnchorEl}
         supportedCurrencies={currencies}
-        isLoading={false}
+        isLoading={areCurrenciesLoading}
         selectItem={setActiveCurrency}
       />
       <Box
@@ -228,7 +228,7 @@ export default function Hero() {
                     setAmount(Number(e.target.value));
                   }}
                   value={amount}
-                  disabled={false}
+                  disabled={areCurrenciesLoading}
                 />
                 <Box
                   sx={{
@@ -420,7 +420,7 @@ export default function Hero() {
                   '_blank'
                 )
               }
-              disabled={false || !activeCurrency}
+              disabled={areCurrenciesLoading || !activeCurrency}
             >
               {formatMessage({ id: 'transferNow' })}
             </Button>
