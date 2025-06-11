@@ -30,7 +30,7 @@ export default function Hero() {
   // const { data: currencies, isFetching: areCurrenciesLoading } =
   //   useCurrencies();
 
-  const [currencies, areCurrenciesLoading] = useState<CurrencyEntity[]>([
+  const [currencies] = useState<CurrencyEntity[]>([
     {
       currency: 'USD',
       supported_currency_id: 'USD',
