@@ -1,8 +1,5 @@
 import styles from './theme.module.css';
 
-/* eslint-disable-next-line */
-export interface ThemeProps { }
-
 export function Theme() {
   return (
     <div className={styles['container']}>
