@@ -1,29 +1,38 @@
+import arrowDownwardIcon from '@iconify/icons-fluent/arrow-down-20-regular';
 import arrowRight from '@iconify/icons-fluent/arrow-right-28-regular';
 import down from '@iconify/icons-fluent/chevron-down-12-filled';
 import { Icon } from '@iconify/react';
-import arrowDownwardIcon from '@iconify/icons-fluent/arrow-down-20-regular';
-import { Avatar, Box, Button, Chip, Divider, TextField, Typography } from "@mui/material";
-import Image from "next/image";
-import { useEffect, useState } from 'react';
-import { useIntl } from "react-intl";
-import CurrencyMenu from './currencyMeny';
-import { CurrencyEntity } from '@xafpay/types';
+import {
+  Box,
+  Button,
+  Chip,
+  Divider,
+  TextField,
+  Typography
+} from '@mui/material';
 import { useTheme } from '@xafpay/theme';
-
-
-
+import { CurrencyEntity } from '@xafpay/types';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useIntl } from 'react-intl';
+import CurrencyMenu from './currencyMeny';
 
 export default function Hero() {
   const { formatMessage, formatNumber } = useIntl();
   const theme = useTheme();
+  const { push } = useRouter();
 
   const [amount, setAmount] = useState<number>(1);
   const [currencyAnchorEl, setCurrencyAnchorEl] = useState<null | HTMLElement>(
     null
   );
   const [activeCurrency, setActiveCurrency] = useState<CurrencyEntity>();
-  const [supportedCurrencies, setSupportedCurrencies] = useState<CurrencyEntity[]>([]);
-  const [isSupportedCurrenciesLoading, setIsSupportedCurrenciesLoading] = useState<boolean>(false)
+  const [supportedCurrencies, setSupportedCurrencies] = useState<
+    CurrencyEntity[]
+  >([]);
+  const [isSupportedCurrenciesLoading, setIsSupportedCurrenciesLoading] =
+    useState<boolean>(false);
 
   const supportedCurrenciesData: CurrencyEntity[] = [
     {
@@ -44,19 +53,18 @@ export default function Hero() {
       created_at: new Date().toDateString(),
       created_by: '',
     },
-
   ];
   const correspondingFlags: { [key: string]: string } = {
     USD: '/assets/usa-flag.jpg',
     CAD: '/assets/canada-flag.png',
-  }
+  };
 
   useEffect(() => {
     // TODO: fetch supported currencies
     setIsSupportedCurrenciesLoading(true);
     setTimeout(() => {
       setSupportedCurrencies(supportedCurrenciesData);
-      setActiveCurrency(supportedCurrenciesData[0])
+      setActiveCurrency(supportedCurrenciesData[0]);
       setIsSupportedCurrenciesLoading(false);
     }, 2000);
   }, []);
@@ -70,35 +78,36 @@ export default function Hero() {
         isLoading={isSupportedCurrenciesLoading}
         selectItem={setActiveCurrency}
       />
-      <Box sx={{
-        display: 'grid',
-        gridTemplateColumns: 'auto 1fr',
-        padding: '48px 130px',
-        height: '90vh',
-        columnGap: '10rem',
-        alignItems: 'center',
-        bgcolor: 'rgba(250, 250, 253, 1)'
-      }}>
-        <Box sx={{
+      <Box
+        sx={{
           display: 'grid',
-          textAlign: 'start',
-          rowGap: 4,
-          width: '50rem',
-          height: 'fit-content',
-        }}>
+          gridTemplateColumns: '1fr 1fr',
+          py: 20,
+          pl: 10,
+          bgcolor: 'rgba(250, 250, 253, 1)',
+        }}
+      >
+        <Box
+          sx={{
+            display: 'grid',
+            textAlign: 'start',
+            rowGap: 4,
+            alignSelf: 'start',
+          }}
+        >
           <Typography
             variant="p1m"
             sx={{
               fontWeight: 500,
               fontSize: { tablet: '16px', mobile: '14px' },
               lineHeight: '150%',
-              color: theme.palette.secondary.main
+              color: theme.palette.secondary.main,
             }}
           >
             {formatMessage({ id: 'adviceheroMessage' })}
           </Typography>
           <Typography
-            variant='h1'
+            variant="h1"
             sx={{
               fontFamily: 'Space Grotesk',
               fontWeight: 'bold',
@@ -127,40 +136,47 @@ export default function Hero() {
             {formatMessage({ id: 'descriptionheroMessage' })}
           </Typography>
           <Button
-            variant='contained'
-            size='large'
+            variant="contained"
+            size="large"
             sx={{
               width: '12rem',
               fontSize: '14px',
               fontFamily: 'Poppins',
             }}
-            onClick={() => alert('Send money')}
+            onClick={() =>
+              window.open(process.env.NEXT_PUBLIC_APP_URL, '_blank')
+            }
           >
             {formatMessage({ id: 'heroActionBtn' })}
           </Button>
         </Box>
 
-        <Box sx={{
-          position: 'relative',
-          height: '100%',
-        }}>
-          <Box sx={{
-            display: 'grid',
-            rowGap: 2,
-            border: '1px solid darkgray',
-            borderRadius: 3,
-            padding: 2,
-            boxShadow: '-120px -80px 8px rgba(21, 124, 251, 0.3), 0px 7px 8px rgba(251, 1, 2, 0.15)',
-            maxWidth: '25rem',
-            position: 'absolute',
-            width: '25rem',
-            top: '45%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            backgroundColor: theme.palette.background.paper,
-          }}>
+        <Box
+          sx={{
+            position: 'relative',
+            height: '100%',
+          }}
+        >
+          <Box
+            sx={{
+              display: 'grid',
+              rowGap: 2,
+              border: '1px solid darkgray',
+              borderRadius: 3,
+              padding: 2,
+              boxShadow:
+                '-40px -40px 8px rgba(21, 124, 251, 0.3), 0px 7px 8px rgba(251, 1, 2, 0.15)',
+              maxWidth: '25rem',
+              position: 'absolute',
+              width: '25rem',
+              top: '45%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              backgroundColor: theme.palette.background.paper,
+            }}
+          >
             <Typography
-              variant='h4'
+              variant="h4"
               sx={{
                 textAlign: 'center',
                 fontFamily: 'Space Grotesk',
@@ -168,31 +184,34 @@ export default function Hero() {
                 fontWeight: 500,
                 lineHeight: '130%',
               }}
-
             >
               {formatMessage({ id: 'OurExchangeRate' })}
             </Typography>
             <Divider />
-            <Box sx={{
-              display: 'grid',
-              textAlign: 'start',
-            }}>
+            <Box
+              sx={{
+                display: 'grid',
+                textAlign: 'start',
+              }}
+            >
               <Typography
                 variant="p3r"
                 sx={{
                   fontSize: { mobile: '10px', tablet: '12px' },
                   lineHeight: '160%',
                   color: '#12192C',
-                  fontFamily: 'Poppins'
+                  fontFamily: 'Poppins',
                 }}
               >
                 {formatMessage({ id: 'whenYouSend' })}
               </Typography>
-              <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <TextField
                   variant="standard"
                   type="number"
@@ -218,25 +237,24 @@ export default function Hero() {
                   value={amount}
                   disabled={isSupportedCurrenciesLoading}
                 />
-                <Box sx={{
-                  display: 'grid',
-                  gridAutoFlow: 'column',
-                  columnGap: 1,
-                  alignItems: 'center',
-                  cursor: 'pointer',
-                }}
+                <Box
+                  sx={{
+                    display: 'grid',
+                    gridAutoFlow: 'column',
+                    columnGap: 1,
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                  }}
                   onClick={(e) => setCurrencyAnchorEl(e.currentTarget)}
                 >
-                  {
-                    activeCurrency && (
-                      <Image
-                        src={correspondingFlags[activeCurrency.currency]}
-                        width={24}
-                        height={24}
-                        alt={`${activeCurrency} flag`}
-                      />
-                    )
-                  }
+                  {activeCurrency && (
+                    <Image
+                      src={correspondingFlags[activeCurrency.currency]}
+                      width={24}
+                      height={24}
+                      alt={`${activeCurrency} flag`}
+                    />
+                  )}
                   <Typography
                     variant="p1m"
                     sx={{
@@ -256,7 +274,8 @@ export default function Hero() {
               sx={{
                 backgroundColor: 'transparent',
                 borderStyle: 'dashed',
-              }}>
+              }}
+            >
               <Chip
                 label={<Icon icon={arrowDownwardIcon} />}
                 sx={{
@@ -271,32 +290,38 @@ export default function Hero() {
                 }}
               />
             </Divider>
-            <Box sx={{
-              display: 'grid',
-              textAlign: 'start',
-            }}>
+            <Box
+              sx={{
+                display: 'grid',
+                textAlign: 'start',
+              }}
+            >
               <Typography
                 variant="p3r"
                 sx={{
                   fontSize: { mobile: '10px', tablet: '12px' },
                   lineHeight: '160%',
                   color: '#12192C',
-                  fontFamily: 'Poppins'
+                  fontFamily: 'Poppins',
                 }}
               >
                 {formatMessage({ id: 'WillReceive' })}
               </Typography>
-              <Box sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
-                <Box sx={{
+              <Box
+                sx={{
                   display: 'flex',
-                  alignItems: 'end',
-                  gap: 1,
-                  flexGrow: 1,
-                }}>
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'end',
+                    gap: 1,
+                    flexGrow: 1,
+                  }}
+                >
                   <Typography
                     variant="h3"
                     sx={{
@@ -306,10 +331,11 @@ export default function Hero() {
                       fontFamily: 'Poppins',
                     }}
                   >
-                    {amount && activeCurrency ?
-                      formatNumber(
-                        Number((amount * activeCurrency.xaf_rate).toFixed(2))
-                      ) : '...'}
+                    {amount && activeCurrency
+                      ? formatNumber(
+                          Number((amount * activeCurrency.xaf_rate).toFixed(2))
+                        )
+                      : '...'}
                   </Typography>
                   <Typography
                     sx={{
@@ -323,12 +349,14 @@ export default function Hero() {
                     XAF
                   </Typography>
                 </Box>
-                <Box sx={{
-                  display: 'grid',
-                  gridAutoFlow: 'column',
-                  columnGap: 1,
-                  alignItems: 'center',
-                }}>
+                <Box
+                  sx={{
+                    display: 'grid',
+                    gridAutoFlow: 'column',
+                    columnGap: 1,
+                    alignItems: 'center',
+                  }}
+                >
                   <Image
                     src="/assets/cameroon-flag.png"
                     width={24}
@@ -350,12 +378,14 @@ export default function Hero() {
               </Box>
             </Box>
             <Divider />
-            <Box sx={{
-              display: 'grid',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gridAutoFlow: 'column',
-            }}>
+            <Box
+              sx={{
+                display: 'grid',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gridAutoFlow: 'column',
+              }}
+            >
               <Typography
                 variant="p2m"
                 sx={{
@@ -391,68 +421,19 @@ export default function Hero() {
                 fontFamily: 'Poppins',
                 width: '100%',
               }}
-              onClick={() => alert('Transfer Now')}
+              onClick={() =>
+                window.open(
+                  `${process.env.NEXT_PUBLIC_APP_URL}/amount=${amount}&currency=${activeCurrency?.currency}`,
+                  '_blank'
+                )
+              }
               disabled={isSupportedCurrenciesLoading || !activeCurrency}
             >
               {formatMessage({ id: 'transferNow' })}
             </Button>
           </Box>
-          <Avatar
-            alt="Xafpay"
-            src="/assets/cameroon-flag.png"
-            sx={{
-              width: 62,
-              height: 62,
-            }}
-          />
-          <Avatar
-            alt="Xafpay"
-            src="/assets/canada-flag.png"
-            sx={{
-              position: 'absolute',
-              top: 60,
-              right: 90,
-              width: 62,
-              height: 62,
-            }}
-          />
-          <Avatar
-            alt="Xafpay"
-            src="/assets/cameroon-flag.png"
-            sx={{
-              position: 'absolute',
-              bottom: 230,
-              left: 70,
-              width: 62,
-              height: 62,
-            }}
-          />
-          <Avatar
-            alt="Xafpay"
-            src="/assets/canada-flag.png"
-            sx={{
-              position: 'absolute',
-              bottom: 130,
-              left: 50,
-              width: 62,
-              height: 62,
-            }}
-          />
-          <Avatar
-            alt="Xafpay"
-            src="/assets/usa.png"
-            sx={{
-              position: 'absolute',
-              bottom: 80,
-              right: 150,
-              width: 62,
-              height: 62,
-            }}
-          />
         </Box>
       </Box>
     </>
-
   );
 }
-
