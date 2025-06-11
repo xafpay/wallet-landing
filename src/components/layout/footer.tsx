@@ -84,6 +84,13 @@ export default function Footer() {
     },
   ];
 
+  const products: { title: string; link: string }[] = [
+    {
+      title: 'XAFPAY',
+      link: `${process.env.NEXT_PUBLIC_APP_URL}`,
+    },
+  ];
+
   return (
     <Box
       sx={{
@@ -113,7 +120,7 @@ export default function Footer() {
         >
           {formatMessage({ id: 'remittanceOnYourHands' })}
         </Typography>
-        <QRCodeSVG value="https://xafpay.com" />
+        <QRCodeSVG value={`${process.env.NEXT_PUBLIC_APP_URL}`} />
       </Box>
       <Box
         sx={{
@@ -145,53 +152,58 @@ export default function Footer() {
           sx={{
             display: 'grid',
             textAlign: 'left',
-            alignItems: 'start',
-            height: 'fit-content',
+            alignContent: 'start',
           }}
         >
           <Typography variant="h3" marginBottom={1}>
             {formatMessage({ id: 'products' })}
           </Typography>
-          <Typography variant="l2r">
-            {formatMessage({ id: 'xafpay' })}
-          </Typography>
+          {products.map(({ title, link }) => (
+            <Typography variant="l2r" component="a" href={link} key={link}>
+              {title}
+            </Typography>
+          ))}
         </Box>
         <Box
           sx={{
             display: 'grid',
             textAlign: 'left',
+            alignContent: 'start',
           }}
         >
           <Typography variant="h3" marginBottom={1}>
             {formatMessage({ id: 'getInTouch' })}
           </Typography>
-          <Typography
-            variant="l2r"
-            component="a"
-            href="mailto:contact@xafpay.com"
-          >
-            {formatMessage({ id: 'email' })}: contact@xafpay.com
-          </Typography>
-          <Typography variant="l2r" component="a" href="tel:+1234567890">
-            {formatMessage({ id: 'phone' })}: +1234567890
-          </Typography>
+          <Box sx={{ display: 'grid', rowGap: 1 }}>
+            <Typography
+              variant="l2r"
+              component="a"
+              href="mailto:contact@xafpay.com"
+            >
+              {formatMessage({ id: 'email' })}: contact@xafpay.com
+            </Typography>
+            <Typography variant="l2r" component="a" href="tel:+1234567890">
+              {formatMessage({ id: 'phone' })}: +1234567890
+            </Typography>
+          </Box>
         </Box>
         <Box
           sx={{
             display: 'grid',
-            rowGap: 1,
             textAlign: 'left',
-            alignItems: 'end',
+            alignContent: 'start',
           }}
         >
           <Typography variant="h3" marginBottom={1}>
             {formatMessage({ id: 'ressources' })}
           </Typography>
-          {resources.map(({ title, link }) => (
-            <Typography variant="l2r" component="a" href={link} key={link}>
-              {title}
-            </Typography>
-          ))}
+          <Box sx={{ display: 'grid', rowGap: 1 }}>
+            {resources.map(({ title, link }) => (
+              <Typography variant="l2r" component="a" href={link} key={link}>
+                {title}
+              </Typography>
+            ))}
+          </Box>
         </Box>
       </Box>
       <Divider />
