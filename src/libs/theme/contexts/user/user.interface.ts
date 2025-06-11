@@ -27,7 +27,7 @@ export interface IUser extends Omit<ISignUp, 'password'> {
 }
 
 export interface IUserContextProviderProps {
-  children: JSX.Element;
+  children: React.ReactElement;
 }
 
 export type Action =

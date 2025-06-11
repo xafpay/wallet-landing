@@ -37,7 +37,7 @@ const languageReducer: Reducer<IUserState, Action> = (
 
 function UserContextProvider({
   children,
-}: IUserContextProviderProps): JSX.Element {
+}: IUserContextProviderProps): React.ReactElement {
   const [userState, userDispatch] = useReducer(languageReducer, initialState);
   const value: IUserState = {
     activeUser: userState.activeUser,

@@ -106,15 +106,13 @@ export default function Footer() {
                     display: 'grid',
                     textAlign: 'left',
                     alignItems: 'start',
+                    height: 'fit-content'
                 }}>
                     <Typography
                         variant="h3"
                         marginBottom={1}
                     >
                         {formatMessage({ id: 'products' })}
-                    </Typography>
-                    <Typography variant="l2r">
-                        {formatMessage({ id: 'xafshop' })}
                     </Typography>
                     <Typography variant="l2r">
                         {formatMessage({ id: 'xafpay' })}

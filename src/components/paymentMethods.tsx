@@ -1,14 +1,12 @@
 import { Box } from "@mui/material";
+import { IPaymentMethods } from "@xafpay/types";
 import Image from "next/image";
 import { useIntl } from "react-intl";
 import SectionTitle from "./sectionTitle";
-import { useTheme } from "@xafpay/theme";
-import { IPaymentMethods } from "@xafpay/types";
 
 
 export default function PaymentMethods() {
     const { formatMessage } = useIntl();
-    const theme = useTheme();
 
 
     const paymentMethods: IPaymentMethods[] = [

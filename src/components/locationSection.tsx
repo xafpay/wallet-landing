@@ -104,8 +104,15 @@ export default function LocationSection() {
                     gridAutoFlow: 'column',
                     textAlign: 'left',
                     columnGap: 1,
+                    alignContent: 'baseline'
                 }}>
-                    <Icon icon={CheckCircleIcon} />
+                    <Icon
+                        icon={CheckCircleIcon}
+                        style={{
+                            width: '24px',
+                            height: '24px',
+                        }}
+                    />
                     <Typography variant="h4">
                         {formatMessage({ id: 'serviceLocation' })}
                     </Typography>
@@ -115,8 +122,15 @@ export default function LocationSection() {
                     gridAutoFlow: 'column',
                     textAlign: 'left',
                     columnGap: 1,
+                    alignContent: 'baseline'
                 }}>
-                    <Icon icon={CheckCircleIcon} />
+                    <Icon
+                        icon={CheckCircleIcon}
+                        style={{
+                            width: '24px',
+                            height: '24px',
+                        }}
+                    />
                     <Typography variant="h4">
                         {formatMessage({ id: 'conformityAndCompliance' })}
                     </Typography>

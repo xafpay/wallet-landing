@@ -195,7 +195,7 @@ export const website = {
   preferredLanguage: 'Preferred Language',
   noAccounts: 'No accounts',
   english: 'English',
-  french: 'Français',
+  french: 'French',
   german: 'Deutsch',
   partnerTermsAndConditions: 'Partner Terms and Conditions',
   transactionDetails: 'Transaction Details',
