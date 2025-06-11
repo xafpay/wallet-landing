@@ -12,8 +12,8 @@ import {
 } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
+import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
@@ -21,18 +21,15 @@ import CurrencyMenu from './currencyMeny';
 export default function Hero() {
   const { formatMessage, formatNumber } = useIntl();
   const theme = useTheme();
-  const { push } = useRouter();
 
   const [amount, setAmount] = useState<number>(1);
   const [currencyAnchorEl, setCurrencyAnchorEl] = useState<null | HTMLElement>(
     null
   );
   const [activeCurrency, setActiveCurrency] = useState<CurrencyEntity>();
-  const [supportedCurrencies, setSupportedCurrencies] = useState<
-    CurrencyEntity[]
-  >([]);
-  const [isSupportedCurrenciesLoading, setIsSupportedCurrenciesLoading] =
-    useState<boolean>(false);
+
+  const { data: currencies, isFetching: areCurrenciesLoading } =
+    useCurrencies();
 
   const supportedCurrenciesData: CurrencyEntity[] = [
     {
@@ -58,24 +55,16 @@ export default function Hero() {
     USD: '/assets/usa-flag.jpg',
     CAD: '/assets/canada-flag.png',
   };
+  if (!areCurrenciesLoading) setActiveCurrency(currencies[0]);
 
-  useEffect(() => {
-    // TODO: fetch supported currencies
-    setIsSupportedCurrenciesLoading(true);
-    setTimeout(() => {
-      setSupportedCurrencies(supportedCurrenciesData);
-      setActiveCurrency(supportedCurrenciesData[0]);
-      setIsSupportedCurrenciesLoading(false);
-    }, 2000);
-  }, []);
   return (
     <>
       <CurrencyMenu
         anchorEl={currencyAnchorEl}
         handleClose={() => setCurrencyAnchorEl(null)}
         open={!!currencyAnchorEl}
-        supportedCurrencies={supportedCurrencies}
-        isLoading={isSupportedCurrenciesLoading}
+        supportedCurrencies={currencies}
+        isLoading={areCurrenciesLoading}
         selectItem={setActiveCurrency}
       />
       <Box
@@ -235,7 +224,7 @@ export default function Hero() {
                     setAmount(Number(e.target.value));
                   }}
                   value={amount}
-                  disabled={isSupportedCurrenciesLoading}
+                  disabled={areCurrenciesLoading}
                 />
                 <Box
                   sx={{
@@ -333,8 +322,8 @@ export default function Hero() {
                   >
                     {amount && activeCurrency
                       ? formatNumber(
-                          Number((amount * activeCurrency.xaf_rate).toFixed(2))
-                        )
+                        Number((amount * activeCurrency.xaf_rate).toFixed(2))
+                      )
                       : '...'}
                   </Typography>
                   <Typography
@@ -427,7 +416,7 @@ export default function Hero() {
                   '_blank'
                 )
               }
-              disabled={isSupportedCurrenciesLoading || !activeCurrency}
+              disabled={areCurrenciesLoading || !activeCurrency}
             >
               {formatMessage({ id: 'transferNow' })}
             </Button>
