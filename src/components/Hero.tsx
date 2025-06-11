@@ -14,7 +14,7 @@ import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
 import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
 
@@ -31,26 +31,6 @@ export default function Hero() {
   const { data: currencies, isFetching: areCurrenciesLoading } =
     useCurrencies();
 
-  const supportedCurrenciesData: CurrencyEntity[] = [
-    {
-      currency: 'USD',
-      supported_currency_id: 'USD',
-      is_active: true,
-      xaf_rate: 600.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-    {
-      currency: 'CAD',
-      supported_currency_id: 'CAD',
-      is_active: true,
-      xaf_rate: 450.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-  ];
   const correspondingFlags: { [key: string]: string } = {
     USD: '/assets/usa-flag.jpg',
     CAD: '/assets/canada-flag.png',
