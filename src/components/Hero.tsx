@@ -8,10 +8,11 @@ import {
   Chip,
   Divider,
   TextField,
-  Typography
+  Typography,
 } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
+import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
@@ -27,37 +28,38 @@ export default function Hero() {
   );
   const [activeCurrency, setActiveCurrency] = useState<CurrencyEntity>();
 
-  // const { data: currencies, isFetching: areCurrenciesLoading } =
-  //   useCurrencies();
+  const { data: currencies, isFetching: areCurrenciesLoading } =
+    useCurrencies();
 
-  const [currencies] = useState<CurrencyEntity[]>([
-    {
-      currency: 'USD',
-      supported_currency_id: 'USD',
-      is_active: true,
-      xaf_rate: 600.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-    {
-      currency: 'CAD',
-      supported_currency_id: 'CAD',
-      is_active: true,
-      xaf_rate: 450.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-  ])
+  // const [currencies] = useState<CurrencyEntity[]>([
+  //   {
+  //     currency: 'USD',
+  //     supported_currency_id: 'USD',
+  //     is_active: true,
+  //     xaf_rate: 600.0,
+  //     last_updated: new Date().toDateString(),
+  //     created_at: new Date().toDateString(),
+  //     created_by: '',
+  //   },
+  //   {
+  //     currency: 'CAD',
+  //     supported_currency_id: 'CAD',
+  //     is_active: true,
+  //     xaf_rate: 450.0,
+  //     last_updated: new Date().toDateString(),
+  //     created_at: new Date().toDateString(),
+  //     created_by: '',
+  //   },
+  // ])
 
   const correspondingFlags: { [key: string]: string } = {
     USD: '/assets/usa-flag.jpg',
     CAD: '/assets/canada-flag.png',
   };
+
   useEffect(() => {
-    setActiveCurrency(currencies[0]);
-  }, [])
+    setActiveCurrency(currencies?.[0]);
+  }, [currencies]);
 
   return (
     <>
@@ -324,8 +326,8 @@ export default function Hero() {
                   >
                     {amount && activeCurrency
                       ? formatNumber(
-                        Number((amount * activeCurrency.xaf_rate).toFixed(2))
-                      )
+                          Number((amount * activeCurrency.xaf_rate).toFixed(2))
+                        )
                       : '...'}
                   </Typography>
                   <Typography
