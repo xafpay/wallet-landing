@@ -96,7 +96,11 @@ export default function Hero() {
             alignSelf: 'start',
           }}
         >
-          <Box>
+          <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            columnGap: 1
+          }}>
             <Typography
               variant="h1"
               sx={{
