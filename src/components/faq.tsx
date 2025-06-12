@@ -83,7 +83,7 @@ export default function FAQ() {
                                     style={{
                                         listStyle: 'disc',
                                         marginLeft: '1.5rem',
-                                        marginTop: '0.5rem'
+                                        marginTop: '1rem'
                                     }}
                                 >
                                     {item}
