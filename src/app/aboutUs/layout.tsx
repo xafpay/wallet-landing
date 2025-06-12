@@ -2,10 +2,9 @@
 
 
 import { PageLayout } from "@components";
-import { PropsWithChildren } from "react";
+import React from "react";
 
-interface PageLayoutprops extends PropsWithChildren { }
 
-export default function AboutUsLayout({ children }: PageLayoutprops) {
+export default function AboutUsLayout({ children }: React.PropsWithChildren) {
     return <PageLayout>{children}</PageLayout>
 }
