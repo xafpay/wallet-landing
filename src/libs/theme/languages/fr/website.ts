@@ -313,4 +313,5 @@ export const website = {
   instantTransferDescription:
     "Envoyez et recevez de l'argent en quelques secondes",
   address: 'Adresse',
+  security: 'Sécurité',
 };

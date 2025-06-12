@@ -309,4 +309,5 @@ export const website = {
   instantTransfer: 'Instant Transfer',
   instantTransferDescription: 'Send and receive money within seconds',
   address: 'Address',
+  secutity: 'Secutity',
 };
