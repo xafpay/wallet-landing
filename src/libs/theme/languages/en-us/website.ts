@@ -262,12 +262,12 @@ export const website = {
   howItWorksStep1: 'Simple registration',
   howItWorksStep1Description:
     'Start by creating an Xafpay account in just a few minutes. Fill in your basic details and choose the payment method that suits you best.',
-  howItWorksStep2: 'Enter amount and your Beneficiary',
+  howItWorksStep2: 'Complete KYC',
   howItWorksStep2Description:
-    "Enter the amount you want to send, and we'll show you the exchange rate in real time.Add the details of the beneficiary in Cameroon, including name, phone number and destination.",
+    'Enter tour persona details, upload identity document and verify your account',
   howItWorksStep3: 'Pay securely',
   howItWorksStep3Description:
-    'Start by creating an Xafpay account in just a few minutes. Fill in your basic details and choose the payment method that suits you best.',
+    'Link your bank account, fund account, enter recipient information and transfer money',
   howItWorksStep4: 'Enter the amount and your Beneficiary',
   howItWorksStep4Description:
     "Enter the amount you want to send, and we'll show you the exchange rate in real time.Add the details of the beneficiary in Cameroon, including name, phone number and destination.",
