@@ -44,7 +44,7 @@ export default function Header() {
         <Box
           sx={{
             display: 'grid',
-            columnGap: 5,
+            columnGap: 3,
             gridAutoFlow: 'column',
           }}
         >
