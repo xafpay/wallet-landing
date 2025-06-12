@@ -305,4 +305,5 @@ export const website = {
   faSecurity: 'Secured by 2FA',
   termsOfService: 'Terms of Service',
   aboutUs: 'About Us',
+  todayRate: 'Today rate',
 };
