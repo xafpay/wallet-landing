@@ -7,7 +7,7 @@ import FAQ from '../components/faq';
 import Functionnalities from '../components/fonctionnality/functionnalities';
 import Hero from '../components/Hero';
 import HowItWorks from '../components/howItWorks/howItWorks';
-import PageLayout from '../components/layout/pageLayout';
+import { PageLayout } from '@components';
 import LocationSection from '../components/locationSection';
 import PaymentMethods from '../components/paymentMethods';
 import TrustSection from '../components/trustSection';
