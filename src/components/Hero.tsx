@@ -21,7 +21,7 @@ export default function Hero() {
   const { formatMessage, formatNumber } = useIntl();
   const theme = useTheme();
 
-  const [amount, setAmount] = useState<number>(1);
+  const [amount, setAmount] = useState<number | string>(1);
   const [currencyAnchorEl, setCurrencyAnchorEl] = useState<null | HTMLElement>(
     null
   );
@@ -59,6 +59,16 @@ export default function Hero() {
     setActiveCurrency(currencies[0]);
   }, [])
 
+  /* Handle amount by checking if number value has been typed 
+     if so not, clear the value textfield
+  */
+  const handleChange = (e) => {
+    const { value } = e.target;
+    if (value === 0 || !isNaN(value)) {
+      setAmount("");
+    }
+    setAmount(value);
+  }
   return (
     <>
       <CurrencyMenu
@@ -222,9 +232,7 @@ export default function Hero() {
                   InputProps={{
                     disableUnderline: true,
                   }}
-                  onChange={(e) => {
-                    setAmount(Number(e.target.value));
-                  }}
+                  onChange={handleChange}
                   value={amount}
                   disabled={false}
                 />
