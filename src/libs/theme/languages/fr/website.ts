@@ -72,8 +72,8 @@ export const website = {
   allTransactions: 'Toutes les transactions',
   searchName: 'Rechercher par nom',
   sendMoneyAt: "Envoyez de l'argent à des ",
-  unbeatable: 'taux imbattables',
-  rates: '',
+  unbeatable: 'imbattables',
+  rates: 'taux',
   clickToSwipe: 'Cliquez pour glisser',
   enterAmount: 'Entrez le montant',
   invalidAmount: 'Montant invalide',
@@ -229,7 +229,7 @@ export const website = {
   SOUTH_WEST: 'Sud-Ouest',
   waitAminute: 'Veuillez patienter...',
   completeNow: 'Complétez le KYC maintenant',
-  howItWorksTitle: 'Comment ça marche',
+  howItWorksTitle: 'Utilisation',
   remittanceOnYourHands: "Votre solution de transfert d'argent",
   ContactUsMessage:
     "Si vous souhaitez en savoir plus sur l'application Xafpay ou si vous avez d'autres questions, n'hésitez pas à nous contacter via le chat de l'application ou par email à contact@xafpay.com.",
@@ -259,7 +259,7 @@ export const website = {
   subtextMessageEngagement: 'Transferts et paiements faciles à tout moment',
   payoutMethods: 'Options de paiement',
   pushToAction: 'Commencez en quelques minutes',
-  faq: 'FAQ',
+  faq: 'FAQs',
   howItWorksStep1: 'Inscription facile',
   howItWorksStep1Description:
     'Commencez par créer un compte Xafpay en quelques minutes. Remplissez vos données de base et choisissez la méthode de paiement qui vous convient le mieux.',
@@ -280,7 +280,7 @@ export const website = {
   qrCodeEngagement:
     'Accédez instantanément à tous vos services financiers en scannant le code QR ci-dessous.',
   adviceheroMessage: 'Économisez sur les transferts avec Xafpay',
-  heroMessage: "Envoyez de l'argent au Cameroun à des taux avantageux",
+  heroMessage: "Transférer de l'argent au Cameroun avec notre",
   descriptionheroMessage:
     'Optimisez la valeur de vos envois de fonds vers le Cameroun grâce à nos taux de change exceptionnels.',
   heroActionBtn: "Envoyer de l'argent",
@@ -289,6 +289,7 @@ export const website = {
   WillReceive: 'Ils reçoivent',
   OurTransactionFees: 'Nos frais',
   feesRate: '0%',
+  feesRates: 'Frais: 0% à vie',
   transferNow: 'Transférer maintenant',
   ourFonctionnalities: 'Fonctionnalités',
   transactrionsHistory: 'Historique des transactions',
@@ -303,7 +304,7 @@ export const website = {
   recipientHistory: 'Liste des bénéficiaires',
   faSecurity: 'Protégé par 2FA',
   termsOfService: "Conditions d'utilisation",
-  aboutUs: 'À propos de nous',
+  aboutUs: 'À propos',
   todayRate: 'Taux du jour',
   doYouHaveAnAccount: 'Avez-vous un compte ?',
   zeroFee: 'Frais zéro',
@@ -314,4 +315,6 @@ export const website = {
     "Envoyez et recevez de l'argent en quelques secondes",
   address: 'Adresse',
   security: 'Sécurité',
+  speed: 'Speed',
+  accessOurAppHere: 'Accéder à notre application ici',
 };

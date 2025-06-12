@@ -258,7 +258,7 @@ export const website = {
     'Manage your transfers and payments easily with our application. Fast, secure and available at all times, so your finances are always under control, wherever you are.',
   payoutMethods: 'Payout Methods',
   pushToAction: 'Getting started is easy',
-  faq: 'FAQ of Xafpay',
+  faq: 'FAQs of Xafpay',
   howItWorksStep1: 'Simple registration',
   howItWorksStep1Description:
     'Start by creating an Xafpay account in just a few minutes. Fill in your basic details and choose the payment method that suits you best.',
@@ -287,6 +287,7 @@ export const website = {
   WillReceive: 'They will receive',
   OurTransactionFees: 'Our transaction fees',
   feesRate: '0%',
+  feesRates: 'Fees: 0% forever',
   transferNow: 'Transfert Now',
   ourFonctionnalities: 'Our fonctionnalities',
   transactrionsHistory: 'Transactions history',
@@ -310,4 +311,7 @@ export const website = {
   instantTransferDescription: 'Send and receive money within seconds',
   address: 'Address',
   secutity: 'Secutity',
+  speed: 'Rapide',
+  accessOurAppHere: 'Access our app here',
+  legal: 'Legal',
 };
