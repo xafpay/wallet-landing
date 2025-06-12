@@ -1,8 +1,8 @@
 import rightIcon from '@iconify/icons-fluent/chevron-right-12-filled';
 import { Icon } from "@iconify/react";
-import { Accordion, AccordionDetails, AccordionSummary, Box, List, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Box } from "@mui/material";
 import { useLanguage, useTheme } from "@xafpay/theme";
-import { faqQuestionsEn, IFaqQuestions, faqQuestionsFr } from "@xafpay/types";
+import { faqQuestionsEn, faqQuestionsFr, IFaqQuestions } from "@xafpay/types";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
 import SectionTitle from "./sectionTitle";
