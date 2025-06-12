@@ -13,3 +13,15 @@ export interface IPaymentMethods {
   link: string;
   alt: string;
 }
+
+interface IImage {
+  link: string;
+  label: string;
+}
+
+/* Interface for why trust section*/
+export interface IWhyTrust {
+  title: string;
+  description: string;
+  image: IImage;
+}

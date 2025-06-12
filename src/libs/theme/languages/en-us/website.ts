@@ -247,15 +247,12 @@ export const website = {
   conformityAndCompliance:
     'Regulatory compliance: Our services comply with all international regulations to ensure maximum transparency and security.',
   whyTrust: 'Find out why they place their trust in us',
-  speedAndReliability: 'Fast and reliable service',
+  speedAndReliability: 'Reliable & secure',
   speedAndReliabilityDescription:
-    'Unrivalled speed and reliability. We guarantee secure money transfers in the blink of an eye.',
-  securityFirst: 'First-rate security',
-  securityFirstDescription:
-    'Unrivalled speed and reliability. We guarantee secure money transfers in the blink of an eye.',
-  competitivePrices: 'Competitive rates',
+    'Guarantee delivery backed by multiple layers of security to ensure your transfers stay safe.',
+  competitivePrices: 'Unbeatable rates',
   competitivePriceDescription:
-    'Unrivalled speed and reliability. We guarantee secure money transfers in the blink of an eye.',
+    'Get better rates than current market exchange rate',
   heroMessageEngagement: 'Everything you need for your financial transactions.',
   subtextMessageEngagement:
     'Manage your transfers and payments easily with our application. Fast, secure and available at all times, so your finances are always under control, wherever you are.',
@@ -307,4 +304,8 @@ export const website = {
   aboutUs: 'About Us',
   todayRate: 'Today rate',
   doYouHaveAnAccount: 'Do you have an account ?',
+  zeroFee: 'Zero fee',
+  zeroFeeDescription: 'Send money globally with no transaction fees',
+  instantTransfer: 'Instant Transfer',
+  instantTransferDescription: 'Send and receive money within seconds',
 };

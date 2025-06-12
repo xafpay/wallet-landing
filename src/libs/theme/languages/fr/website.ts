@@ -249,15 +249,12 @@ export const website = {
   conformityAndCompliance:
     'Conformité réglementaire : Nos services sont conformes à toutes les réglementations internationales afin de garantir une transparence et une sécurité maximales.',
   whyTrust: 'Pourquoi nous choisir',
-  speedAndReliability: 'Rapidité & Fiabilité',
+  speedAndReliability: 'Rapidité & Sécurité',
   speedAndReliabilityDescription:
-    "Rapidité et fiabilité inégalées. Nous garantissons des transferts d'argent sécurisés en un clin d'œil.",
-  securityFirst: 'Sécurité maximale',
-  securityFirstDescription:
-    "Rapidité et fiabilité inégalées. Nous garantissons des transferts d'argent sécurisés en un clin d'œil.",
+    "Garantir la livraison en s'appuyant sur plusieurs niveaux de sécurité pour assurer la sécurité de vos transferts",
   competitivePrices: 'Taux avantageux',
   competitivePriceDescription:
-    "Rapidité et fiabilité inégalées. Nous garantissons des transferts d'argent sécurisés en un clin d'œil.",
+    'Obtenir des taux plus avantageux que les taux de change actuels du marché',
   heroMessageEngagement: 'Tous vos besoins financiers au même endroit',
   subtextMessageEngagement: 'Transferts et paiements faciles à tout moment',
   payoutMethods: 'Options de paiement',
