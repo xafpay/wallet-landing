@@ -281,7 +281,7 @@ export const website = {
   qrCodeEngagement:
     'Get instant access to all your financial services by scanning the QR code below.',
   adviceheroMessage: 'Save on your transfers with Xafpay.',
-  heroMessage: 'Transfer money to Cameroon with our unbeatable rates.',
+  heroMessage: 'Transfer money to Cameroon with our',
   descriptionheroMessage:
     'Maximise the value of your remittances to Cameroon with our exceptional exchange rates.',
   heroActionBtn: 'Send money',
@@ -306,4 +306,5 @@ export const website = {
   termsOfService: 'Terms of Service',
   aboutUs: 'About Us',
   todayRate: 'Today rate',
+  doYouHaveAnAccount: 'Do you have an account ?',
 };

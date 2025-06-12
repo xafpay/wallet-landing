@@ -157,20 +157,37 @@ export default function Hero() {
           >
             {formatMessage({ id: 'descriptionheroMessage' })}
           </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            sx={{
-              width: '12rem',
-              fontSize: '14px',
-              fontFamily: 'Poppins',
-            }}
-            onClick={() =>
-              window.open(process.env.NEXT_PUBLIC_APP_URL, '_blank')
-            }
-          >
-            {formatMessage({ id: 'heroActionBtn' })}
-          </Button>
+          <Box sx={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            columnGap: 2
+          }}>
+            <Typography
+              variant='h4'
+              sx={{
+                fontFamily: 'Space Grotesk',
+                color: 'rgba(28, 29, 39, 0.80)',
+              }}
+            >
+              {formatMessage({ id: 'doYouHaveAnAccount' })}
+            </Typography>
+            <Button
+              variant="contained"
+              size="medium"
+              sx={{
+                width: '12rem',
+                fontSize: '14px',
+                fontFamily: 'Poppins',
+              }}
+              onClick={() =>
+                window.open(`${process.env.NEXT_PUBLIC_APP_URL}/register`, '_blank')
+              }
+            >
+              {formatMessage({ id: 'register' })}
+            </Button>
+          </Box>
         </Box>
 
         <Box
