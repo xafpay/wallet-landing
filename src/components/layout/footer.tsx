@@ -131,23 +131,18 @@ export default function Footer() {
           marginBottom: '32px',
         }}
       >
-        <Box
+        <Typography
+          variant='h4'
           sx={{
-            display: 'grid',
-            rowGap: 0,
             textAlign: 'left',
+            width: '40%',
+            fonstFamily: 'Space Grotesk',
           }}
         >
-          <Image
-            src="/assets/logo.png"
-            alt="Xafpay Logo"
-            width={166}
-            height={80}
-          />
-          <Typography variant="caption" color="white" fontFamily="Poppins">
-            @xafpay -{dayjs('01-01-2023').format('YYYY')}
-          </Typography>
-        </Box>
+          XAFPAY LLC is a Fintech company incorporated in the USA under Montana SOS file
+          No.C1446980-16217942. Registered with FinCEN as a money service business
+          with registration number 31000273428168
+        </Typography>
         <Box
           sx={{
             display: 'grid',
@@ -169,6 +164,7 @@ export default function Footer() {
             display: 'grid',
             textAlign: 'left',
             alignContent: 'start',
+            width: '12rem'
           }}
         >
           <Typography variant="h3" marginBottom={1}>
@@ -182,8 +178,9 @@ export default function Footer() {
             >
               {formatMessage({ id: 'email' })}: contact@xafpay.com
             </Typography>
-            <Typography variant="l2r" component="a" href="tel:+1234567890">
-              {formatMessage({ id: 'phone' })}: +1234567890
+            <Typography variant="l2r">
+              {formatMessage({ id: 'address' })}:
+              1001 S. Main ST., STE 600, Kalispell MT 59901, USA
             </Typography>
           </Box>
         </Box>
@@ -239,7 +236,7 @@ export default function Footer() {
           {formatMessage({ id: 'ContactUsMessage' })}
         </Typography>
         <Typography variant="p2r" sx={{ textAlign: 'center' }}>
-          Copyrigth@xafpay - {2023}
+          © {2024} XAFPAY LLC. ALL RIGHTS RESERVED
         </Typography>
       </Box>
     </Box>

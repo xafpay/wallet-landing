@@ -302,4 +302,15 @@ export const website = {
   securePayment: 'Paiements sécurisés',
   recipientHistory: 'Liste des bénéficiaires',
   faSecurity: 'Protégé par 2FA',
+  termsOfService: "Conditions d'utilisation",
+  aboutUs: 'À propos de nous',
+  todayRate: 'Taux du jour',
+  doYouHaveAnAccount: 'Avez-vous un compte ?',
+  zeroFee: 'Frais zéro',
+  zeroFeeDescription:
+    "Envoyez de l'argent à l'étranger sans frais de transaction",
+  instantTransfer: 'Transfert instantané',
+  instantTransferDescription:
+    "Envoyez et recevez de l'argent en quelques secondes",
+  address: 'Adresse',
 };

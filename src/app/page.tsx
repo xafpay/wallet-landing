@@ -21,9 +21,7 @@ export default function Index() {
       <LocationSection />
       <TrustSection />
       <Engagement />
-      <Functionnalities />
       <HowItWorks />
-      <ContactUsSection />
       <PaymentMethods />
       <Cta />
       <FAQ />

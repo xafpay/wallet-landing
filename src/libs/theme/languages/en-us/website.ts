@@ -308,4 +308,5 @@ export const website = {
   zeroFeeDescription: 'Send money globally with no transaction fees',
   instantTransfer: 'Instant Transfer',
   instantTransferDescription: 'Send and receive money within seconds',
+  address: 'Address',
 };
