@@ -304,4 +304,5 @@ export const website = {
   recipientHistory: 'Recipient history',
   faSecurity: 'Secured by 2FA',
   termsOfService: 'Terms of Service',
+  aboutUs: 'About Us',
 };
