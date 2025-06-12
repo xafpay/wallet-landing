@@ -5,8 +5,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
-import dayjs from 'dayjs';
-import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { JSX } from 'react';
 import { useIntl } from 'react-intl';
