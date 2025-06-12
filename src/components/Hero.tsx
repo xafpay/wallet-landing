@@ -96,32 +96,53 @@ export default function Hero() {
             alignSelf: 'start',
           }}
         >
-          <Typography
-            variant="p1m"
-            sx={{
-              fontWeight: 500,
-              fontSize: { tablet: '16px', mobile: '14px' },
-              lineHeight: '150%',
-              color: theme.palette.secondary.main,
-            }}
-          >
-            {formatMessage({ id: 'adviceheroMessage' })}
-          </Typography>
-          <Typography
-            variant="h1"
-            sx={{
-              fontFamily: 'Space Grotesk',
-              fontWeight: 'bold',
-              fontSize: {
-                tablet: '48px',
-                mobile: '36px',
-              },
-              lineHeight: '120%',
-              color: '#0E103A',
-            }}
-          >
-            {formatMessage({ id: 'heroMessage' })}
-          </Typography>
+          <Box>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: 'Space Grotesk',
+                fontWeight: 'bold',
+                fontSize: {
+                  tablet: '48px',
+                  mobile: '36px',
+                },
+                lineHeight: '120%',
+                color: '#0E103A',
+              }}
+            >
+              {formatMessage({ id: 'heroMessage' })}
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: 'Space Grotesk',
+                fontWeight: 'bold',
+                fontSize: {
+                  tablet: '48px',
+                  mobile: '36px',
+                },
+                lineHeight: '120%',
+                color: theme.palette.secondary.main,
+              }}
+            >
+              {formatMessage({ id: 'unbeatable' })}
+            </Typography>
+            <Typography
+              variant="h1"
+              sx={{
+                fontFamily: 'Space Grotesk',
+                fontWeight: 'bold',
+                fontSize: {
+                  tablet: '48px',
+                  mobile: '36px',
+                },
+                lineHeight: '120%',
+                color: '#0E103A',
+              }}
+            >
+              {formatMessage({ id: 'rates' })}
+            </Typography>
+          </Box>
           <Typography
             variant="h2"
             sx={{
