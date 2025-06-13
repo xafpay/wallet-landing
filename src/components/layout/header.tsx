@@ -13,7 +13,7 @@ export default function Header() {
 
   const navItems: INavItem[] = [
     { label: formatMessage({ id: 'home' }), href: '/' },
-    { label: formatMessage({ id: 'aboutUs' }), href: 'aboutUs' },
+    { label: formatMessage({ id: 'aboutUs' }), href: '/aboutUs' },
     { label: formatMessage({ id: 'howItWorksTitle' }), href: '/#howItWorks' },
     { label: 'FAQ', href: '/#faq' },
   ];
