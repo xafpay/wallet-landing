@@ -213,7 +213,7 @@ export default function Footer() {
           rowGap: 1
         }}>
           <Typography variant="p2r">
-            © {2024} XAFPAY LLC. ALL RIGHTS RESERVED
+            © {2023} XAFPAY LLC. ALL RIGHTS RESERVED
           </Typography>
           <Box
             sx={{
