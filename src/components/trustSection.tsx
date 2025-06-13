@@ -13,7 +13,7 @@ export default function TrustSection() {
             title: formatMessage({ id: 'speedAndReliability' }),
             description: formatMessage({ id: 'speedAndReliabilityDescription' }),
             image: {
-                link: '/assets/reliable-secure.png',
+                link: '/assets/immunity.svg',
                 label: formatMessage({ id: 'security' })
             }
         },
@@ -21,7 +21,7 @@ export default function TrustSection() {
             title: formatMessage({ id: 'zeroFee' }),
             description: formatMessage({ id: 'zeroFeeDescription' }),
             image: {
-                link: '/assets/zero-fee.png',
+                link: '/assets/no-fee.svg',
                 label: formatMessage({ id: 'zeroFee' })
             }
 
@@ -30,7 +30,7 @@ export default function TrustSection() {
             title: formatMessage({ id: 'competitivePrices' }),
             description: formatMessage({ id: 'competitivePriceDescription' }),
             image: {
-                link: '/assets/unbeatable-fee.png',
+                link: '/assets/feedback-review.svg',
                 label: formatMessage({ id: 'unbeatable' })
             }
 
@@ -39,7 +39,7 @@ export default function TrustSection() {
             title: formatMessage({ id: 'instantTransfer' }),
             description: formatMessage({ id: 'instantTransferDescription' }),
             image: {
-                link: '/assets/speed.png',
+                link: '/assets/time-fast.svg',
                 label: formatMessage({ id: 'speed' })
             }
 
