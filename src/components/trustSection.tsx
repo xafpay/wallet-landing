@@ -80,8 +80,8 @@ export default function TrustSection() {
                             <Image
                                 src={image.link}
                                 alt={image.label}
-                                width={150}
-                                height={100}
+                                width={120}
+                                height={70}
                                 style={{
                                     justifySelf: 'center',
                                     objectFit: 'contain',
