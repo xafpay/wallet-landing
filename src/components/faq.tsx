@@ -5,7 +5,7 @@ import { useLanguage, useTheme } from "@xafpay/theme";
 import { faqQuestionsEn, faqQuestionsFr, IFaqQuestions } from "@xafpay/types";
 import { useEffect, useState } from "react";
 import { useIntl } from "react-intl";
-import SectionTitle from "./sectionTitle";
+import { SectionTitle } from "@components";
 
 
 export default function FAQ() {

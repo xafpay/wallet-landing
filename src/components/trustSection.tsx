@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { useIntl } from "react-intl";
-import SectionTitle from "./sectionTitle";
+import { SectionTitle } from "@components";
 import { IWhyTrust } from "@xafpay/types";
 
 

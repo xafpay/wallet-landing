@@ -2,7 +2,7 @@ import { Box, Chip, Typography } from "@mui/material";
 import { useTheme } from "@xafpay/theme";
 import Image from "next/image";
 import { useIntl } from "react-intl";
-import SectionTitle from "../sectionTitle";
+import { SectionTitle } from "@components";
 import TextCard from "./textCard";
 
 export default function HowItWorks() {
