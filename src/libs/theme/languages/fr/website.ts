@@ -317,4 +317,20 @@ export const website = {
   security: 'Sécurité',
   speed: 'Speed',
   accessOurAppHere: 'Accéder à notre application ici',
+  legal: 'Légal',
+  getStarted: 'Commencer',
+  aboutUsDescription:
+    "Lancée en 2023, Xafpay LLC est une startup fintech qui redéfinit la manière dont l'argent traverse les frontières, en commençant par le corridor États-Unis-Cameroun. Dans une région où les transferts d'argent constituent une bouée de sauvetage vitale pour des millions de personnes, nous avons pour mission de rendre les transferts plus rapides, plus abordables et accessibles aux communautés mal desservies d'Afrique subsaharienne.",
+  ourMissionDescription:
+    "Chez XAFPAY, nous utilisons des technologies numériques avancées pour fournir des solutions de transfert d'argent sécurisées, économiques et conviviales, contribuant ainsi à combler les écarts financiers et à autonomiser les familles à travers le continent.",
+  ourMissionEngagement:
+    "L'Afrique est en pleine croissance, et ses besoins aussi. Nous sommes là pour y répondre—un transfert à la fois.",
+  joinUs: "Rejoignez-nous pour révolutionner les transferts d'argent",
+  joinUsDescription:
+    "Que vous envoyiez de l'argent pour soutenir votre famille, investir dans une entreprise ou payer des factures, XAFPAY LLC est votre partenaire de confiance. Nous sommes créés par des Africains, pour les Africains et tous ceux qui croient en un avenir financier plus juste et plus rapide.",
+  ourMission: 'Notre Mission',
+  feesannualStat:
+    "Flux annuels de transferts d'argent vers l'Afrique subsaharienne",
+  feesStat: 'Plus de 50 milliards de dollars',
+  transferPercentage: 'Frais moyens par transfert dans la région',
 };

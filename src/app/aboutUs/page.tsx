@@ -10,12 +10,12 @@ export default function AboutUs() {
   const theme = useTheme();
   const hightlightData = [
     {
-      label: '$50 billion+',
-      description: 'Flows into Sub-Saharan Africa in remittances annually',
+      label: 'feesStat',
+      description: formatMessage({ id: 'feesannualStat' }),
     },
     {
       label: '6-10%',
-      description: 'Average fees per transfer in the region',
+      description: formatMessage({ id: 'transferPercentage' }),
     },
   ];
   return (
@@ -40,11 +40,7 @@ export default function AboutUs() {
           lineHeight: 2,
         }}
       >
-        Launched in 2023, Xafpay LLC is a fintech startup redefining how money
-        moves across borders starting with the USA to Cameroon corridor. In a
-        region where remittances are a vital lifeline for millions, we're on a
-        mission to make transfers faster, more affordable, and accessible to
-        underserved communities across Sub-Saharan Africa.
+        {formatMessage({ id: 'aboutUsDescription' })}
       </Typography>
       <Box
         sx={{
@@ -93,7 +89,7 @@ export default function AboutUs() {
           gutterBottom
           sx={{ fontWeight: 600 }}
         >
-          Our Mission
+          {formatMessage({ id: 'ourMission' })}
         </Typography>
         <Divider sx={{ mb: 3 }} />
         <Typography
@@ -104,9 +100,7 @@ export default function AboutUs() {
             fontFamily: 'Poppins',
           }}
         >
-          At XAFPAY, we are harnessing advanced digital technology, to deliver
-          secure, low-cost, and user-friendly remittance solutions helping
-          bridge financial gaps and empower families across the continent.
+          {formatMessage({ id: 'ourMissionDescription' })}
         </Typography>
         <Typography
           variant="p1r"
@@ -117,8 +111,7 @@ export default function AboutUs() {
           }}
         >
           {' '}
-          Africa is rising, and so are its needs. We're here to meet them—one
-          transfer at a time.
+          {formatMessage({ id: 'ourMissionEngagement' })}
         </Typography>
       </Box>
 
@@ -134,7 +127,7 @@ export default function AboutUs() {
         }}
       >
         <Typography variant="h3" gutterBottom sx={{ fontWeight: 700 }}>
-          Join Us in Revolutionizing Remittances
+          {formatMessage({ id: 'joinUs' })}
         </Typography>
         <Typography
           variant="p1r"
@@ -145,10 +138,7 @@ export default function AboutUs() {
             lineHeight: 2,
           }}
         >
-          Whether you're sending money to support family, invest in a business,
-          or pay bills, XAFPAY LLC is your trusted partner. We're built by
-          Africans, for Africans and everyone who believes in a fairer, faster
-          financial future.
+          {formatMessage({ id: 'joinUsDescription' })}
         </Typography>
         <Button
           variant="contained"
@@ -160,6 +150,9 @@ export default function AboutUs() {
             py: 1.5,
             fontSize: '1.1rem',
             fontWeight: 600,
+          }}
+          onClick={() => {
+            window.open(process.env.NEXT_PUBLIC_APP_URL, '_blank')
           }}
         >
           {formatMessage({ id: 'getStarted' })}
