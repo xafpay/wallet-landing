@@ -185,7 +185,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="l2r">
               {formatMessage({ id: 'address' })}:
-              1001 S. Main ST., STE 600, Kalispell MT 59901, USA
+              1001 S. Main ST, STE 600, Kalispell MT 59901, USA
             </Typography>
           </Box>
         </Box>
