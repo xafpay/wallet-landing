@@ -3,7 +3,6 @@ import { useTheme } from "@xafpay/theme";
 import { INavItem } from "@xafpay/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 
 interface INavItemProps {

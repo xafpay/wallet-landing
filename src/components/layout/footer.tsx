@@ -75,12 +75,6 @@ export default function Footer() {
     },
   ];
 
-  const products: { title: string; link: string }[] = [
-    {
-      title: 'XAFPAY',
-      link: `${process.env.NEXT_PUBLIC_APP_URL}`,
-    },
-  ];
 
   return (
     <Box
