@@ -12,3 +12,4 @@ export * from './paymentMethods';
 export * from './cta';
 export * from './faq';
 export * from './sectionTitle';
+export * from './termsOfConditions';
