@@ -1,23 +1,11 @@
 'use client';
 
 import { SectionTitle } from '@components';
-import { Box, Button, Divider, Typography } from '@mui/material';
-import { useTheme } from '@xafpay/theme';
+import { Box, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
 
 export default function AboutUs() {
   const { formatMessage, formatDate } = useIntl();
-  const theme = useTheme();
-  const hightlightData = [
-    {
-      label: 'feesStat',
-      description: formatMessage({ id: 'feesannualStat' }),
-    },
-    {
-      label: '6-10%',
-      description: formatMessage({ id: 'transferPercentage' }),
-    },
-  ];
   const style = {
     fontFamily: 'Space Grotesk',
     fontSize: '1.1rem',
@@ -41,9 +29,9 @@ export default function AboutUs() {
       >
         {formatMessage({ id: 'updatedAs' })}{' '}
         {formatDate(new Date('2025-06-16'), {
-          day: 'numeric',
-          month: 'long',
           year: 'numeric',
+          month: 'long',
+          day: 'numeric',
         })}
       </Typography>
       <Box sx={{
