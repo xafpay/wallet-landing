@@ -262,19 +262,13 @@ export const website = {
   faq: 'FAQs',
   howItWorksStep1: 'Inscription facile',
   howItWorksStep1Description:
-    'Commencez par créer un compte Xafpay en quelques minutes. Remplissez vos données de base et choisissez la méthode de paiement qui vous convient le mieux.',
+    'Commencez par créer un compte Xafpay en quelques minutes. Inscrivez-vous en utilisant votre email ou votre numéro de téléphone',
   howItWorksStep2: 'Complete le KYC',
   howItWorksStep2Description:
     "Saisissez vos données personnelles, téléchargez une pièce d'identité et vérifiez votre compte.",
   howItWorksStep3: 'Paiement sécurisé',
   howItWorksStep3Description:
     "Reliez votre compte bancaire, approvisionnez votre compte, saisissez les informations du destinataire et transférez de l'argent.",
-  howItWorksStep4: 'Montant & Bénéficiaire',
-  howItWorksStep4Description:
-    'Saisissez le montant que vous souhaitez envoyer et nous vous indiquerons le taux de change en temps réel. Ajoutez les coordonnées du bénéficiaire au Cameroun, y compris son nom, son numéro de téléphone et sa destination.',
-  howItWorksStep5: 'Paiement sécurisé',
-  howItWorksStep5Description:
-    'Commencez par créer un compte Xafpay en quelques minutes. Remplissez vos données de base et choisissez la méthode de paiement qui vous convient le mieux.',
   remittanceSolutionOnHand:
     "Votre solution de transfert d'argent à portée de main",
   qrCodeEngagement:
