@@ -67,11 +67,11 @@ export default function Footer() {
   const resources: { title: string; link: string }[] = [
     {
       title: formatMessage({ id: 'privacyPolicy' }),
-      link: `${process.env.NEXT_PUBLIC_APP_URL}/privacy-policy`,
+      link: `/termsAndcondition`,
     },
     {
       title: formatMessage({ id: 'termsOfService' }),
-      link: `${process.env.NEXT_PUBLIC_APP_URL}/terms-of-service`,
+      link: `/termsAndcondition`,
     },
   ];
 
@@ -201,8 +201,13 @@ export default function Footer() {
               justifyContent: 'end',
               columnGap: 2,
             }}>
-              {resources.map(({ title, link }) => (
-                <Typography variant="l2r" component="a" href={link} key={link}>
+              {resources.map(({ title, link }, index) => (
+                <Typography
+                  variant="l2r"
+                  component="a"
+                  href={link}
+                  key={`${title}-${index}`}
+                >
                   {title}
                 </Typography>
               ))}
