@@ -314,18 +314,38 @@ export const website = {
   speed: 'Rapide',
   accessOurAppHere: 'Access our app here',
   legal: 'Legal',
-  getStarted: 'Get started',
-  aboutUsDescription:
-    "Launched in 2023, Xafpay LLC is a fintech startup redefining how money moves across borders starting with the USA to Cameroon corridor. In aregion where remittances are a vital lifeline for millions, we're on amission to make transfers faster, more affordable, and accessible to underserved communities across Sub-Saharan Africa.",
-  ourMissionDescription:
-    'At XAFPAY, we are harnessing advanced digital technology, to deliver secure, low-cost, and user-friendly remittance solutions helping bridge financial gaps and empower families across the continent.',
   ourMissionEngagement:
-    "Africa is rising, and so are its needs. We're here to meet them—one transfer at a time.",
+    " Africa is rising, and so are its needs. We're here to meet them—one transfer at a time.",
   joinUs: 'Join Us in Revolutionizing Remittances',
-  joinUsDescription:
-    " Whether you're sending money to support family, invest in a business,or pay bills, XAFPAY LLC is your trusted partner. We're built by Africans, for Africans and everyone who believes in a fairer, faster financial future.",
   ourMission: 'Our Mission',
   feesannualStat: 'Flows into Sub-Saharan Africa in remittances annually',
   feesStat: '$50 billion+',
   transferPercentage: 'Average fees per transfer in the region',
+  updatedAs: 'Updated as of',
+  whatMakesUsUnique: 'What makes us unique',
+  launchedDate: 'Launched in 2023, ',
+  xafpayLLC: 'Xafpay LLC ',
+  aboutUsDescriptionP1:
+    "is a fintech startup redefining how money moves across borders starting with the USA to Cameroon corridor. In a region where remittances are a vital lifeline for millions, we're on a mission to make transfers ",
+  aboutUsDescriptionP1Highlighted: 'faster, more affordable, ',
+  accessible: 'accessible ',
+  aboutUsDescriptionP2: 'to underserved communities across Sub-Saharan Africa.',
+  everyYear: 'Every year, over ',
+  balanceRate: '$50 billion ',
+  aboutUsDescriptionP3:
+    'flows into Sub-Saharan Africa in remittances yet high fees (averaging ',
+  aboutUsDescriptionP3Highlighted: '6-10% ',
+  aboutUsDescriptionP4:
+    'per transfer) and slow processing leave families waiting longer and losing more. We’re changing that.',
+  at: 'At ',
+  ourMissionDescriptionP1:
+    ', we are harnessing advanced digital technology, to deliver ',
+  ourMissionDescriptionP1Highlighted: 'secure, low-cost, ',
+  userFriendly: 'user-friendly ',
+  ourMissionDescriptionP2:
+    'remittance solutions helping bridge financial gaps and empower families across the continent.',
+  joinUsDescriptionP1:
+    "Whether you're sending money to support family, invest in a business,or pay bills, ",
+  joinUsDescriptionP2:
+    "is your trusted partner. We're built by Africans, for Africans and everyone who believes in a fairer, faster financial future.",
 };

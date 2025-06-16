@@ -318,19 +318,40 @@ export const website = {
   speed: 'Speed',
   accessOurAppHere: 'Accéder à notre application ici',
   legal: 'Légal',
-  getStarted: 'Commencer',
-  aboutUsDescription:
-    "Lancée en 2023, Xafpay LLC est une startup fintech qui redéfinit la manière dont l'argent traverse les frontières, en commençant par le corridor États-Unis-Cameroun. Dans une région où les transferts d'argent constituent une bouée de sauvetage vitale pour des millions de personnes, nous avons pour mission de rendre les transferts plus rapides, plus abordables et accessibles aux communautés mal desservies d'Afrique subsaharienne.",
-  ourMissionDescription:
-    "Chez XAFPAY, nous utilisons des technologies numériques avancées pour fournir des solutions de transfert d'argent sécurisées, économiques et conviviales, contribuant ainsi à combler les écarts financiers et à autonomiser les familles à travers le continent.",
   ourMissionEngagement:
     "L'Afrique est en pleine croissance, et ses besoins aussi. Nous sommes là pour y répondre—un transfert à la fois.",
   joinUs: "Rejoignez-nous pour révolutionner les transferts d'argent",
-  joinUsDescription:
-    "Que vous envoyiez de l'argent pour soutenir votre famille, investir dans une entreprise ou payer des factures, XAFPAY LLC est votre partenaire de confiance. Nous sommes créés par des Africains, pour les Africains et tous ceux qui croient en un avenir financier plus juste et plus rapide.",
   ourMission: 'Notre Mission',
   feesannualStat:
     "Flux annuels de transferts d'argent vers l'Afrique subsaharienne",
   feesStat: 'Plus de 50 milliards de dollars',
   transferPercentage: 'Frais moyens par transfert dans la région',
+  updatedAs: 'Mis à jour le',
+  whatMakesUsUnique: 'Ce qui nous rend unique',
+  launchedDate: 'Lancé en 2023, ',
+  xafpayLLC: 'Xafpay LLC ',
+  aboutUsDescriptionP1:
+    "est une startup fintech qui redéfinit les transferts d'argent à l'international, en commençant par le corridor USA-Cameroun. Dans une région où les transferts d'argent sont vitaux pour des millions de personnes, notre mission est de rendre ces transactions ",
+  aboutUsDescriptionP1Highlighted: 'plus rapides, plus économiques, ',
+  accessible: 'accessibles ',
+  aboutUsDescriptionP2:
+    "aux communautés mal desservies à travers l'Afrique subsaharienne.",
+  everyYear: 'Chaque année, plus de ',
+  balanceRate: '50 milliards de dollars ',
+  aboutUsDescriptionP3:
+    "sont envoyés vers l'Afrique subsaharienne sous forme de transferts, mais des frais élevés (en moyenne ",
+  aboutUsDescriptionP3Highlighted: '6-10% ',
+  aboutUsDescriptionP4:
+    "par transaction) et des délais de traitement longs font que les familles attendent plus longtemps et perdent plus d'argent. Nous changeons cela.",
+  at: 'Chez ',
+  ourMissionDescriptionP1:
+    ', nous utilisons des technologies numériques avancées pour fournir des solutions de transfert ',
+  ourMissionDescriptionP1Highlighted: 'sécurisées, économiques, ',
+  userFriendly: 'et conviviales ',
+  ourMissionDescriptionP2:
+    ', contribuant ainsi à combler les écarts financiers et à autonomiser les familles à travers le continent.',
+  joinUsDescriptionP1:
+    "Que vous envoyiez de l'argent pour soutenir votre famille, investir dans une entreprise ou payer des factures, ",
+  joinUsDescriptionP2:
+    'est votre partenaire de confiance. Nous sommes créés par des Africains, pour les Africains et tous ceux qui croient en un avenir financier plus équitable et plus rapide.',
 };

@@ -6,7 +6,7 @@ import { useTheme } from '@xafpay/theme';
 import { useIntl } from 'react-intl';
 
 export default function AboutUs() {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatDate } = useIntl();
   const theme = useTheme();
   const hightlightData = [
     {
@@ -18,145 +18,252 @@ export default function AboutUs() {
       description: formatMessage({ id: 'transferPercentage' }),
     },
   ];
+  const style = {
+    fontFamily: 'Space Grotesk',
+    fontSize: '1.1rem',
+  };
   return (
     <Box
       maxWidth="laptop"
       sx={{
         display: 'grid',
         justifySelf: 'center',
+        padding: '0 0 48px 0',
       }}
     >
       <SectionTitle color="#0E103A">
         {formatMessage({ id: 'aboutUs' })}
       </SectionTitle>
-
       <Typography
-        variant="p1r"
-        sx={{
-          fontSize: '1.2rem',
-          padding: '20px 0',
-          fontFamily: 'Poppins',
-          textAlign: 'justify',
-          lineHeight: 2,
-        }}
+        variant='p2r'
+        justifySelf='center'
+        lineHeight={2}
       >
-        {formatMessage({ id: 'aboutUsDescription' })}
+        {formatMessage({ id: 'updatedAs' })}{' '}
+        {formatDate(new Date('2025-06-16'), {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
       </Typography>
-      <Box
-        sx={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          columnGap: 5,
-          justifySelf: 'center',
-          color: 'white',
-          fontFamily: 'Poppins',
-          py: 5,
-        }}
-      >
-        {hightlightData.map((item, index) => (
-          <Box
-            key={index}
+      <Box sx={{
+        display: 'grid',
+        rowGap: 2,
+        paddingTop: 5
+      }}>
+        <Typography
+          variant='h3'
+          sx={{
+            fontFamily: 'Space Grotesk',
+            lineHeight: '120%',
+          }}
+        >
+          {formatMessage({ id: 'whatMakesUsUnique' })}
+        </Typography>
+        <Box>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'launchedDate' })}
+          </Typography>
+          <Typography
+            variant='p1r'
             sx={{
-              display: 'grid',
-              rowGap: 1,
-              textAlign: 'center',
-              padding: 2,
-              backgroundColor: theme.palette.primary.main,
-              width: 'fit-content',
-              borderRadius: 2,
-              boxShadow: '0px 14px 41px rgba(0, 0, 0, 0.25)',
+              ...style,
+              fontWeight: 'bold',
             }}
           >
-            <Typography variant="h2" fontWeight="bold">
-              {item.label}
-            </Typography>
-            <Typography variant="p1r" fontWeight="bold" width="340px">
-              {item.description}
-            </Typography>
-          </Box>
-        ))}
+            {formatMessage({ id: 'xafpayLLC' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP1' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP1Highlighted' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'and' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'accessible' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP2' })}
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'everyYear' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'balanceRate' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP3' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP3Highlighted' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'aboutUsDescriptionP4' })}
+          </Typography>
+        </Box>
       </Box>
-      <Box
-        sx={{
-          textAlign: 'justify',
-          lineHeight: 2,
-          py: 5,
-        }}
-      >
+      <Box sx={{
+        paddingTop: '40px',
+        display: 'grid',
+        rowGap: 2
+      }}>
         <Typography
-          variant="h4"
-          component="h2"
-          gutterBottom
-          sx={{ fontWeight: 600 }}
+          variant='h3'
+          sx={{
+            fontFamily: 'Space Grotesk',
+            lineHeight: '120%',
+          }}
         >
           {formatMessage({ id: 'ourMission' })}
         </Typography>
-        <Divider sx={{ mb: 3 }} />
-        <Typography
-          variant="p1r"
-          sx={{
-            fontSize: '1.1rem',
-            textAlign: 'justify',
-            fontFamily: 'Poppins',
-          }}
-        >
-          {formatMessage({ id: 'ourMissionDescription' })}
-        </Typography>
-        <Typography
-          variant="p1r"
-          sx={{
-            fontSize: '1.1rem',
-            fontStyle: 'italic',
-            fontFamily: 'Poppins',
-          }}
-        >
-          {' '}
-          {formatMessage({ id: 'ourMissionEngagement' })}
-        </Typography>
+        <Box>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'at' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'xafpay' }).toUpperCase()}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'ourMissionDescriptionP1' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'ourMissionDescriptionP1Highlighted' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'and' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'userFriendly' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'ourMissionDescriptionP2' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'ourMissionEngagement' })}
+          </Typography>
+        </Box>
       </Box>
-
-      <Box
-        sx={{
-          border: `1px solid ${theme.palette.grey[200]}`,
-          borderRadius: 2,
-          display: 'grid',
-          padding: 2,
-          justifyItems: 'center',
-          mb: 5,
-          rowGap: 2,
-        }}
-      >
-        <Typography variant="h3" gutterBottom sx={{ fontWeight: 700 }}>
+      <Box sx={{
+        paddingTop: '40px',
+        display: 'grid',
+        rowGap: 2
+      }}>
+        <Typography
+          variant='h3'
+          sx={{
+            fontFamily: 'Space Grotesk',
+            lineHeight: '120%',
+          }}
+        >
           {formatMessage({ id: 'joinUs' })}
         </Typography>
-        <Typography
-          variant="p1r"
-          sx={{
-            fontSize: '1.1rem',
-            textAlign: 'justify',
-            fontFamily: 'Poppins',
-            lineHeight: 2,
-          }}
-        >
-          {formatMessage({ id: 'joinUsDescription' })}
-        </Typography>
-        <Button
-          variant="contained"
-          color="secondary"
-          size="large"
-          sx={{
-            mt: 3,
-            px: 4,
-            py: 1.5,
-            fontSize: '1.1rem',
-            fontWeight: 600,
-          }}
-          onClick={() => {
-            window.open(process.env.NEXT_PUBLIC_APP_URL, '_blank')
-          }}
-        >
-          {formatMessage({ id: 'getStarted' })}
-        </Button>
+        <Box>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'joinUsDescriptionP1' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={{
+              ...style,
+              fontWeight: 'bold',
+            }}
+          >
+            {formatMessage({ id: 'xafpayLLC' })}
+          </Typography>
+          <Typography
+            variant='p1r'
+            sx={style}
+          >
+            {formatMessage({ id: 'joinUsDescriptionP2' })}
+          </Typography>
+
+        </Box>
       </Box>
     </Box>
   );
