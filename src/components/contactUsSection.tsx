@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { useIntl } from 'react-intl';
 
-export default function ContactUsSection() {
+export function ContactUsSection() {
   const { formatMessage } = useIntl();
   return (
     <Box

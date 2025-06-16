@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 import { SectionTitle } from "@components"
 
 
-export default function PaymentMethods() {
+export function PaymentMethods() {
     const { formatMessage } = useIntl();
 
 

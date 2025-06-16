@@ -1,14 +1,15 @@
 'use client';
 
 import { PageLayout } from '@components';
-import Cta from '../components/cta';
-import Engagement from '../components/engagement';
-import FAQ from '../components/faq';
-import Hero from '../components/Hero';
-import HowItWorks from '../components/howItWorks/howItWorks';
-import LocationSection from '../components/locationSection';
-import PaymentMethods from '../components/paymentMethods';
-import TrustSection from '../components/trustSection';
+import { Cta } from '@components';
+import { Engagement } from '@components';
+import { FAQ } from '@components';
+import { Hero } from '@components';
+import { HowItWorks } from '@components';
+import { LocationSection } from '@components';
+import { PaymentMethods } from '@components';
+import { TrustSection } from '@components';
+import { ContactUsSection } from '@components';
 
 
 export default function Index() {
@@ -20,6 +21,7 @@ export default function Index() {
       <TrustSection />
       <Engagement />
       <HowItWorks />
+      <ContactUsSection />
       <PaymentMethods />
       <Cta />
       <FAQ />

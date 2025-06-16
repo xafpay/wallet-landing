@@ -5,7 +5,7 @@ import { SectionTitle } from "@components";
 import { Icon } from "@iconify/react";
 
 
-export default function LocationSection() {
+export function LocationSection() {
     const { formatMessage } = useIntl();
 
     return (

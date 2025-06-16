@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { useIntl } from "react-intl";
 
-export default function Engagement() {
+export function Engagement() {
     const { formatMessage } = useIntl();
     return (
         <Box sx={{

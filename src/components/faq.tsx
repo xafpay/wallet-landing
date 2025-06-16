@@ -8,7 +8,7 @@ import { useIntl } from "react-intl";
 import { SectionTitle } from "@components";
 
 
-export default function FAQ() {
+export function FAQ() {
     const { formatMessage } = useIntl();
     const theme = useTheme();
     const [faqQuestionsData, setFaqQuestionsData] =

@@ -18,7 +18,7 @@ import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
 import { useCurrencies } from 'api/hooks/useCurrency';
 
-export default function Hero() {
+export function Hero() {
   const { formatMessage, formatNumber } = useIntl();
   const theme = useTheme();
 

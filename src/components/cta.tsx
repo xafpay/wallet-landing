@@ -2,7 +2,7 @@ import { Box, Button, Typography } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
 import { useIntl } from 'react-intl';
 
-export default function Cta() {
+export function Cta() {
   const { formatMessage } = useIntl();
   const theme = useTheme();
 

@@ -5,7 +5,7 @@ import { useIntl } from "react-intl";
 import { SectionTitle } from "@components";
 import TextCard from "./textCard";
 
-export default function HowItWorks() {
+export function HowItWorks() {
     const { formatMessage } = useIntl();
     const theme = useTheme();
     return (
