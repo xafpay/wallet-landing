@@ -5,18 +5,10 @@ import { SectionTitle } from "@components";
 import { IWhyTrust } from "@xafpay/types";
 
 
-export default function TrustSection() {
+export function TrustSection() {
     const { formatMessage } = useIntl();
 
     const whyTrustData: IWhyTrust[] = [
-        {
-            title: formatMessage({ id: 'speedAndReliability' }),
-            description: formatMessage({ id: 'speedAndReliabilityDescription' }),
-            image: {
-                link: '/assets/immunity.svg',
-                label: formatMessage({ id: 'security' })
-            }
-        },
         {
             title: formatMessage({ id: 'zeroFee' }),
             description: formatMessage({ id: 'zeroFeeDescription' }),
@@ -42,7 +34,14 @@ export default function TrustSection() {
                 link: '/assets/time-fast.svg',
                 label: formatMessage({ id: 'speed' })
             }
-
+        },
+        {
+            title: formatMessage({ id: 'speedAndReliability' }),
+            description: formatMessage({ id: 'speedAndReliabilityDescription' }),
+            image: {
+                link: '/assets/immunity.svg',
+                label: formatMessage({ id: 'security' })
+            }
         }
     ]
 
