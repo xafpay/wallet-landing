@@ -119,7 +119,7 @@ export default function Footer() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
+          gridTemplateColumns: '1fr 1fr',
           marginTop: '32px',
           marginBottom: '32px',
         }}
@@ -140,24 +140,6 @@ export default function Footer() {
           <Typography variant="caption" color="white" fontFamily="Poppins">
             @xafpay -{2023}
           </Typography>
-        </Box>
-        <Box
-          sx={{
-            display: 'grid',
-            textAlign: 'center',
-            alignContent: 'start',
-          }}
-        >
-          <Typography variant="h3" marginBottom={1}>
-            {formatMessage({ id: 'legal' })}
-          </Typography>
-          <Box sx={{ display: 'grid', rowGap: 1 }}>
-            {resources.map(({ title, link }) => (
-              <Typography variant="l2r" component="a" href={link} key={link}>
-                {title}
-              </Typography>
-            ))}
-          </Box>
         </Box>
         <Box
           sx={{
@@ -197,24 +179,42 @@ export default function Footer() {
           No.C1446980-16217942. Registered with FinCEN as a money service business
           with registration number 31000273428168
         </Typography>
-        <Typography variant="h5" sx={{ fontWeight: 500 }}>
-          {formatMessage({ id: 'ContactUsMessage' })}
-        </Typography>
+        <Divider />
         <Box sx={{
           display: 'grid',
-          justifyItems: 'center',
           alignItems: 'center',
-          rowGap: 1
+          rowGap: 2
         }}>
-          <Typography variant="p2r">
-            © {2023} XAFPAY LLC. ALL RIGHTS RESERVED
-          </Typography>
+          <Box sx={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            columnGap: 2,
+            justifyItems: 'space-between',
+          }}>
+            <Typography variant="p2r">
+              © {2023} XAFPAY LLC. ALL RIGHTS RESERVED
+            </Typography>
+            <Box sx={{
+              display: 'grid',
+              gridAutoFlow: 'column',
+              alignItems: 'center',
+              justifyContent: 'end',
+              columnGap: 2,
+            }}>
+              {resources.map(({ title, link }) => (
+                <Typography variant="l2r" component="a" href={link} key={link}>
+                  {title}
+                </Typography>
+              ))}
+            </Box>
+          </Box>
           <Box
             sx={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, auto)',
               width: 'fit-content',
               columnGap: 2,
+              justifySelf: 'end',
             }}
           >
             {socialIcon.map(({ icon, link }, index) => (
