@@ -7,7 +7,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { QRCodeSVG } from 'qrcode.react';
 import { JSX } from 'react';
 import { useIntl } from 'react-intl';
@@ -18,7 +17,6 @@ interface ISocialIcon {
 }
 export default function Footer() {
   const { formatMessage } = useIntl();
-  const { push } = useRouter();
   const socialIcon: ISocialIcon[] = [
     {
       icon: (
