@@ -354,4 +354,6 @@ export const website = {
     "Que vous envoyiez de l'argent pour soutenir votre famille, investir dans une entreprise ou payer des factures, ",
   joinUsDescriptionP2:
     'est votre partenaire de confiance. Nous sommes créés par des Africains, pour les Africains et tous ceux qui croient en un avenir financier plus équitable et plus rapide.',
+  termsAndCondition: 'Conditions Générales',
+  termsAndConditionDescription: `Bienvenue sur Xafpay. Ces Conditions Générales d'Utilisation ("CGU") régissent votre accès et votre utilisation de l'application mobile Xafpay, du site web et des services associés (collectivement, la « Plateforme ») fournis par XAFPAY LLC (« Xafpay », « nous », « notre »). En utilisant la Plateforme, vous acceptez d'être lié par ces CGU. Si vous n'êtes pas d'accord, veuillez ne pas utiliser la Plateforme.`,
 };

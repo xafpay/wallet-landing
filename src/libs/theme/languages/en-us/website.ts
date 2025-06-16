@@ -348,4 +348,6 @@ export const website = {
     "Whether you're sending money to support family, invest in a business,or pay bills, ",
   joinUsDescriptionP2:
     "is your trusted partner. We're built by Africans, for Africans and everyone who believes in a fairer, faster financial future.",
+  termsAndCondition: 'Terms and Conditions',
+  termsAndConditionDescription: `Welcome to Xafpay. These Terms and Conditions ("Terms") govern your access to and use of the Xafpay mobile application, website, and related services (collectively, the “Platform”) provided by XAFPAY LLC (“Xafpay,” “we,” “us,” or “our”). By using the Platform, you agree to be bound by these Terms. If you do not agree, do not use the Platform.`,
 };
