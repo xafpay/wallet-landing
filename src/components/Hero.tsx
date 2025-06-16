@@ -16,6 +16,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
+import { useCurrencies } from 'api/hooks/useCurrency';
 
 export default function Hero() {
   const { formatMessage, formatNumber } = useIntl();
@@ -27,29 +28,30 @@ export default function Hero() {
   );
   const [activeCurrency, setActiveCurrency] = useState<CurrencyEntity>();
 
-  // const { data: currencies, isFetching: areCurrenciesLoading } =
-  //   useCurrencies();
+  const { data: currencies, isFetching: areCurrenciesLoading } =
+    useCurrencies();
 
-  const [currencies] = useState<CurrencyEntity[]>([
-    {
-      currency: 'USD',
-      supported_currency_id: 'USD',
-      is_active: true,
-      xaf_rate: 600.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-    {
-      currency: 'CAD',
-      supported_currency_id: 'CAD',
-      is_active: true,
-      xaf_rate: 450.0,
-      last_updated: new Date().toDateString(),
-      created_at: new Date().toDateString(),
-      created_by: '',
-    },
-  ])
+  // TODO: remove hardcoded currencies
+  // const [currencies] = useState<CurrencyEntity[]>([
+  //   {
+  //     currency: 'USD',
+  //     supported_currency_id: 'USD',
+  //     is_active: true,
+  //     xaf_rate: 600.0,
+  //     last_updated: new Date().toDateString(),
+  //     created_at: new Date().toDateString(),
+  //     created_by: '',
+  //   },
+  //   {
+  //     currency: 'CAD',
+  //     supported_currency_id: 'CAD',
+  //     is_active: true,
+  //     xaf_rate: 450.0,
+  //     last_updated: new Date().toDateString(),
+  //     created_at: new Date().toDateString(),
+  //     created_by: '',
+  //   },
+  // ])
 
   const correspondingFlags: { [key: string]: string } = {
     USD: '/assets/usa-flag.jpg',
@@ -76,7 +78,7 @@ export default function Hero() {
         handleClose={() => setCurrencyAnchorEl(null)}
         open={!!currencyAnchorEl}
         supportedCurrencies={currencies}
-        isLoading={false}
+        isLoading={areCurrenciesLoading}
         selectItem={setActiveCurrency}
       />
       <Box
@@ -302,7 +304,7 @@ export default function Hero() {
                     }}
                     onChange={handleChange}
                     value={amount}
-                    disabled={false}
+                    disabled={areCurrenciesLoading}
                   />
                   <Box
                     sx={{
@@ -483,7 +485,7 @@ export default function Hero() {
                     '_blank'
                   )
                 }
-                disabled={false || !activeCurrency}
+                disabled={areCurrenciesLoading || !activeCurrency}
               >
                 {formatMessage({ id: 'transferNow' })}
               </Button>
