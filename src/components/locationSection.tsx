@@ -19,7 +19,10 @@ export function LocationSection() {
             background: 'linear-gradient(to right, rgba(15, 93, 190, 1), rgba(7, 43, 88, 1))',
             color: 'white',
             textAlign: 'center',
-            rowGap: 7
+            rowGap: {
+                mobile: 4,
+                laptop: 7
+            }
         }}>
             <Box sx={{
                 display: 'grid',
@@ -46,6 +49,11 @@ export function LocationSection() {
                     display: 'grid',
                     gridAutoFlow: 'column',
                     alignItems: 'center',
+                    width: {
+                        mobile: '70%',
+                        tablet: '100%'
+                    },
+                    justifySelf: 'center'
                 }}>
                     <Box sx={{
                         display: 'grid',
@@ -100,11 +108,11 @@ export function LocationSection() {
                         sx={{
                             width: {
                                 tablet: '400px',
-                                mobile: '170px'
+                                mobile: '150px'
                             },
                             height: {
                                 tablet: '400px',
-                                mobile: '170px'
+                                mobile: '150px'
                             },
                         }}
                     />
@@ -117,7 +125,7 @@ export function LocationSection() {
                     mobile: 'repeat(1, 1fr)'
                 },
                 columnGap: 25,
-                rowGap: 5
+                rowGap: 3
             }}>
                 <Box sx={{
                     display: 'grid',
