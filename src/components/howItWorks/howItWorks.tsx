@@ -85,34 +85,12 @@ export function HowItWorks() {
                         justifySelf: 'end'
                     }}
                 />
-                <Box sx={{
-                    display: 'grid',
-                    rowGap: 2,
-                    height: 'fit-content',
-                    transform: 'translate(9px, -40px)'
-                }}>
-                    <Chip
-                        label='3'
-                        sx={{
-                            backgroundColor: theme.palette.primary.main,
-                            color: 'white',
-                            fontSize: '1.5rem',
-                            fontWeight: 'bold',
-                            width: '2.5rem',
-                            height: '2.5rem',
-                            borderRadius: '30%',
-                        }}
-                    />
-                    <Typography variant='h3'>
-                        {formatMessage({ id: 'howItWorksStep3' })}
-                    </Typography>
-                    <Typography
-                        variant='p1r'
-                        maxWidth='25rem'
-                    >
-                        {formatMessage({ id: 'howItWorksStep3Description' })}
-                    </Typography>
-                </Box>
+                <TextCard
+                    title={formatMessage({ id: 'howItWorksStep3' })}
+                    description={formatMessage({ id: 'howItWorksStep3Description' })}
+                    step={3}
+                    positionY={40}
+                />
             </Box>
         </Box>
     )
