@@ -283,7 +283,7 @@ export const website = {
   WillReceive: 'Ils reçoivent',
   OurTransactionFees: 'Nos frais',
   feesRate: '0%',
-  feesRates: 'Frais: 0% à vie',
+  feesRates: 'Taux de change du jour',
   transferNow: 'Transférer maintenant',
   ourFonctionnalities: 'Fonctionnalités',
   transactrionsHistory: 'Historique des transactions',

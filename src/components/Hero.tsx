@@ -213,14 +213,10 @@ export function Hero() {
                   lineHeight: '130%',
                 }}
               >
-                {activeCurrency ?
-                  `1 ${activeCurrency.currency} = XAF ${activeCurrency.xaf_rate.toFixed(2)}`
-                  :
-                  'loading...'
-                }
+                {formatMessage({ id: 'feesRates' })}
               </Typography>
               <Typography
-                variant="h4"
+                variant="h5"
                 sx={{
                   textAlign: 'center',
                   fontFamily: 'Space Grotesk',
@@ -228,7 +224,11 @@ export function Hero() {
                   lineHeight: '130%',
                 }}
               >
-                {formatMessage({ id: 'feesRates' })}
+                {activeCurrency ?
+                  `1 ${activeCurrency.currency} = XAF ${activeCurrency.xaf_rate}`
+                  :
+                  'loading...'
+                }
               </Typography>
             </Box>
             <Box sx={{

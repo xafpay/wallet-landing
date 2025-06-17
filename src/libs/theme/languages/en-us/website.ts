@@ -281,7 +281,7 @@ export const website = {
   WillReceive: 'They will receive',
   OurTransactionFees: 'Our transaction fees',
   feesRate: '0%',
-  feesRates: 'Fees: 0% forever',
+  feesRates: "Today's Exchange Rate",
   transferNow: 'Transfert Now',
   ourFonctionnalities: 'Our fonctionnalities',
   transactrionsHistory: 'Transactions history',
