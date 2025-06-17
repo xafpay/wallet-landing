@@ -21,7 +21,7 @@ export default function Header() {
     { label: formatMessage({ id: 'home' }), href: '/' },
     { label: formatMessage({ id: 'aboutUs' }), href: '/aboutUs' },
     { label: formatMessage({ id: 'howItWorksTitle' }), href: '/#howItWorks' },
-    { label: 'FAQ', href: '/#faq' },
+    { label: formatMessage({ id: 'faq' }), href: '/#faq' },
   ];
   return (
     <>
