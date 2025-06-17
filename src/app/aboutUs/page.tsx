@@ -39,15 +39,6 @@ export default function AboutUs() {
         rowGap: 2,
         paddingTop: 5
       }}>
-        <Typography
-          variant='h3'
-          sx={{
-            fontFamily: 'Space Grotesk',
-            lineHeight: '120%',
-          }}
-        >
-          {formatMessage({ id: 'whatMakesUsUnique' })}
-        </Typography>
         <Box>
           <Typography
             variant='p1r'
@@ -141,19 +132,10 @@ export default function AboutUs() {
         </Box>
       </Box>
       <Box sx={{
-        paddingTop: '40px',
+        paddingTop: 2,
         display: 'grid',
         rowGap: 2
       }}>
-        <Typography
-          variant='h3'
-          sx={{
-            fontFamily: 'Space Grotesk',
-            lineHeight: '120%',
-          }}
-        >
-          {formatMessage({ id: 'ourMission' })}
-        </Typography>
         <Box>
           <Typography
             variant='p1r'
