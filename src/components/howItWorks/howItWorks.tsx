@@ -14,13 +14,13 @@ export function HowItWorks() {
             sx={{
                 display: 'grid',
                 justifyContent: 'center',
-                bgcolor: 'rgba(250, 250, 253, 1)'
+                bgcolor: 'rgba(250, 250, 253, 1)',
+                paddingBottom: 10
             }}
         >
             <SectionTitle color='#0E103A'>
                 {formatMessage({ id: 'howItWorksTitle' })}
             </SectionTitle>
-            {/* TODO: Adjust screenshot reflecting each activity */}
             <Box sx={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(2, 1fr)',
@@ -29,10 +29,10 @@ export function HowItWorks() {
                 paddingTop: 5,
             }}>
                 <Image
-                    src='/assets/exchangeRate.png'
+                    src='/assets/step_1_xaf.png'
                     alt='first registration step'
                     width={400}
-                    height={350}
+                    height={500}
                     style={{
                         objectFit: 'contain',
                     }}
@@ -54,16 +54,16 @@ export function HowItWorks() {
                     title={formatMessage({ id: 'howItWorksStep2' })}
                     description={formatMessage({ id: 'howItWorksStep2Description' })}
                     step={2}
-                    positionY={77}
+                    positionY={30}
                 />
                 <Image
-                    src='/assets/preTransactionOverview.png'
+                    src='/assets/step_2_xaf.png'
                     alt='second registration step'
                     width={350}
                     height={600}
                     style={{
                         objectFit: 'contain',
-                        objectPosition: 'top'
+                        objectPosition: 'center'
                     }}
                 />
 
@@ -75,10 +75,10 @@ export function HowItWorks() {
                 alignItems: 'center'
             }}>
                 <Image
-                    src='/assets/accountBalance.png'
+                    src='/assets/step_3_xaf.png'
                     alt='first registration step'
-                    width={350}
-                    height={280}
+                    width={400}
+                    height={500}
                     style={{
                         objectFit: 'contain',
                         objectPosition: 'top',

@@ -258,13 +258,13 @@ export const website = {
     'Manage your transfers and payments easily with our application. Fast, secure and available at all times, so your finances are always under control, wherever you are.',
   payoutMethods: 'Payout Methods',
   pushToAction: 'Getting started is easy',
-  faq: 'FAQs of Xafpay',
-  howItWorksStep1: 'Simple registration',
+  faq: 'FAQs',
+  howItWorksStep1: 'Register',
   howItWorksStep1Description:
     'Start by creating a Xafpay account in just a few minutes. Sign up by using your email or phone number.',
   howItWorksStep2: 'Complete KYC',
   howItWorksStep2Description:
-    'Enter tour persona details, upload identity document and verify your account',
+    'Enter your persona details, upload identity document and verify your account',
   howItWorksStep3: 'Pay securely',
   howItWorksStep3Description:
     'Link your bank account, fund account, enter recipient information and transfer money',

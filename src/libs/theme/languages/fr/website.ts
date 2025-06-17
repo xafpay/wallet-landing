@@ -260,7 +260,7 @@ export const website = {
   payoutMethods: 'Options de paiement',
   pushToAction: 'Commencez en quelques minutes',
   faq: 'FAQs',
-  howItWorksStep1: 'Inscription facile',
+  howItWorksStep1: "S'inscrire",
   howItWorksStep1Description:
     'Commencez par créer un compte Xafpay en quelques minutes. Inscrivez-vous en utilisant votre email ou votre numéro de téléphone',
   howItWorksStep2: 'Complete le KYC',
