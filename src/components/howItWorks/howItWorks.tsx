@@ -1,13 +1,11 @@
-import { Box, Chip, Typography } from "@mui/material";
-import { useTheme } from "@xafpay/theme";
+import { SectionTitle } from "@components";
+import { Box } from "@mui/material";
 import Image from "next/image";
 import { useIntl } from "react-intl";
-import { SectionTitle } from "@components";
 import TextCard from "./textCard";
 
 export function HowItWorks() {
     const { formatMessage } = useIntl();
-    const theme = useTheme();
     return (
         <Box
             id="howItWorks"
