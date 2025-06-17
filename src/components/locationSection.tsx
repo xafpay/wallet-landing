@@ -11,7 +11,10 @@ export function LocationSection() {
     return (
         <Box sx={{
             display: 'grid',
-            padding: '0 118px',
+            padding: {
+                mobile: '0 16px 64px',
+                tablet: '0 118px 64px'
+            },
             paddingBottom: '48px',
             background: 'linear-gradient(to right, rgba(15, 93, 190, 1), rgba(7, 43, 88, 1))',
             color: 'white',
@@ -25,7 +28,12 @@ export function LocationSection() {
                 <SectionTitle color="white" width="90%">
                     {formatMessage({ id: 'HeroRemittanceMessage' })}
                 </SectionTitle>
-                <Typography variant="h3" >
+                <Typography
+                    variant="h3"
+                    sx={{
+                        fontSize: { tablet: '24px', mobile: '20px' },
+                    }}
+                >
                     {formatMessage({ id: 'reliableRemittanceService' })}
                 </Typography>
             </Box>
@@ -74,6 +82,8 @@ export function LocationSection() {
                                 component='img'
                                 src='/assets/usa.png'
                                 alt="cad flag"
+                                sx={{
+                                }}
                             />
                             <Box
                                 component='img'
@@ -88,16 +98,26 @@ export function LocationSection() {
                         src='/assets/africa.png'
                         alt='africa map'
                         sx={{
-                            width: '400px',
-                            height: '400px',
+                            width: {
+                                tablet: '400px',
+                                mobile: '170px'
+                            },
+                            height: {
+                                tablet: '400px',
+                                mobile: '170px'
+                            },
                         }}
                     />
                 </Box>
             </Box>
             <Box sx={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
+                gridTemplateColumns: {
+                    tablet: 'repeat(2, 1fr)',
+                    mobile: 'repeat(1, 1fr)'
+                },
                 columnGap: 25,
+                rowGap: 5
             }}>
                 <Box sx={{
                     display: 'grid',
