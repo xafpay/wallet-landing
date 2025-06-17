@@ -124,23 +124,12 @@ export default function Footer() {
           marginBottom: '32px',
         }}
       >
-        <Box
-          sx={{
-            display: 'grid',
-            rowGap: 0,
-            textAlign: 'left',
-          }}
-        >
-          <Image
-            src="/assets/logo.png"
-            alt="Xafpay Logo"
-            width={166}
-            height={80}
-          />
-          <Typography variant="caption" color="white" fontFamily="Poppins">
-            @xafpay -{2023}
-          </Typography>
-        </Box>
+        <Image
+          src="/assets/logo.png"
+          alt="Xafpay Logo"
+          width={170}
+          height={85}
+        />
         <Box
           sx={{
             display: 'grid',
