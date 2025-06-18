@@ -67,7 +67,7 @@ export default function Footer() {
   const resources: { title: string; link: string }[] = [
     {
       title: formatMessage({ id: 'privacyPolicy' }),
-      link: `/termsAndcondition`,
+      link: `/privacyPolicy`,
     },
     {
       title: formatMessage({ id: 'termsOfService' }),

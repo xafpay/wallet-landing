@@ -262,13 +262,13 @@ export const website = {
   faq: 'FAQs',
   howItWorksStep1: "S'inscrire",
   howItWorksStep1Description:
-    'Commencez par créer un compte Xafpay en quelques minutes. Inscrivez-vous en utilisant votre email ou votre numéro de téléphone',
+    'Créez un compte en indiquant votre adresse électronique, votre numéro de téléphone et vos données personnelles.',
   howItWorksStep2: 'Complete le KYC',
   howItWorksStep2Description:
-    "Saisissez vos données personnelles, téléchargez une pièce d'identité et vérifiez votre compte.",
+    'Téléchargez vos documents, vérifiez votre identité et approvisionnez votre compte.',
   howItWorksStep3: 'Paiement sécurisé',
   howItWorksStep3Description:
-    "Reliez votre compte bancaire, approvisionnez votre compte, saisissez les informations du destinataire et transférez de l'argent.",
+    "Saisissez les informations relatives au destinataire et transférez l'argent",
   remittanceSolutionOnHand:
     "Votre solution de transfert d'argent à portée de main",
   qrCodeEngagement:
@@ -350,4 +350,8 @@ export const website = {
     'est votre partenaire de confiance. Nous sommes créés par des Africains, pour les Africains et tous ceux qui croient en un avenir financier plus équitable et plus rapide.',
   termsAndCondition: 'Conditions Générales',
   termsAndConditionDescription: `Bienvenue sur Xafpay. Ces Conditions Générales d'Utilisation ("CGU") régissent votre accès et votre utilisation de l'application mobile Xafpay, du site web et des services associés (collectivement, la « Plateforme ») fournis par XAFPAY LLC (« Xafpay », « nous », « notre »). En utilisant la Plateforme, vous acceptez d'être lié par ces CGU. Si vous n'êtes pas d'accord, veuillez ne pas utiliser la Plateforme.`,
+  En: 'An',
+  Fr: 'Fr',
+  privacyPolicyDescription:
+    "Cette Politique de Confidentialité décrit comment XAFPAY LLC (« Xafpay », « nous », « notre » ou « nos ») collecte, utilise, divulgue et protège les informations personnelles via notre application mobile, site web et services financiers associés (collectivement, les « Services »). Cette Politique s'applique à tous les utilisateurs aux États-Unis et reflète notre engagement en matière de protection de la vie privée, de transparence et de conformité avec les lois fédérales et étatiques sur la confidentialité applicables.",
 };
