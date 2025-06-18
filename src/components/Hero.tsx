@@ -8,15 +8,16 @@ import {
   Chip,
   Divider,
   TextField,
-  Typography
+  Typography,
 } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
+import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
-import { useCurrencies } from 'api/hooks/useCurrency';
+
 
 export function Hero() {
   const { formatMessage, formatNumber } = useIntl();
@@ -35,9 +36,10 @@ export function Hero() {
     USD: '/assets/usa-flag.jpg',
     CAD: '/assets/canada-flag.png',
   };
+
   useEffect(() => {
-    setActiveCurrency(currencies[0]);
-  }, [])
+    setActiveCurrency(currencies?.[0]);
+  }, [currencies]);
 
   /* Handle amount by checking if number value has been typed 
      if so not, clear the value textfield
