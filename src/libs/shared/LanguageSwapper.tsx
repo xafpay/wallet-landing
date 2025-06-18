@@ -1,4 +1,4 @@
-import { TextField, MenuItem, Box, Typography } from "@mui/material";
+import { MenuItem, TextField, Typography } from "@mui/material";
 import { useLanguage } from "@xafpay/theme";
 import { SupportedLanguageEnum } from "@xafpay/types";
 import { useIntl } from "react-intl";
