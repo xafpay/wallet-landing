@@ -352,3 +352,212 @@ export const termsOfConditionsFr: IFaqQuestions[] = [
     },
   },
 ];
+
+export const privacyPolicyEn: IFaqQuestions[] = [
+  {
+    question: 'Scope and Applicability',
+    answer: {
+      response: 'This Policy applies to personal data collected when you:',
+      description: [
+        'Use our website (www.xafpay.com) or mobile app',
+        'Sign up, transact, or communicate with us',
+        'Interact with us via email, phone, or support channels',
+        'Engage with us through third-party services or referrals It applies to both online and offline interactions',
+      ],
+    },
+  },
+  {
+    question: 'Information We Collect',
+    answer: {
+      response: 'Information you provide directly :',
+      description: [
+        'Full Name, Date of Birth, Nationality',
+        'Address, Phone Number, Email Address',
+        'Government-issued ID, Social Security Number (if required)',
+        'Bank or Card Information, Transaction Details',
+        'Photo and Identity Verification (e.g., selfie with ID)',
+        'Communications and support interactions Information About Recipients:',
+        "Recipient's name, contact details, and banking info",
+        'Purpose of payment',
+        'Optional access to your contact list (with consent) Third-Party Sources:',
+        'Authentication providers (e.g., Google, Apple)',
+        'Referral partners and data enrichment services',
+        'Social media and marketing platforms',
+        'AML/KYC providers Automatically Collected Data:',
+        'Device information (browser, OS, IP address)',
+        'App and website usage patterns',
+        'Cookie and tracking data (see Cookie Policy)',
+      ],
+    },
+  },
+  {
+    question: 'How We Use Your Information',
+    answer: {
+      response: '',
+      description: [
+        'Deliver our Services, including cross-border payments, wallet services, and transaction processing',
+        'Authenticate users and comply with AML/CFT obligations',
+        'Provide support and respond to inquiries',
+        'Enhance and personalize the user experience',
+        'Conduct analytics, improve services, and develop new features',
+        'Detect and prevent fraud or unauthorized activities',
+        'Fulfill legal and contractual obligations',
+        'Send service communications and marketing content (with opt-out rights)',
+      ],
+    },
+  },
+  {
+    question: 'Sharing Your Information',
+    answer: {
+      response: '',
+      description: [
+        'Service Providers (e.g., banks, identity verification services, infrastructure providers)',
+        'Regulators and Law Enforcement when required by applicable law or court order',
+        'Business Partners for processing transactions or co-branded services',
+        'Affiliates and Corporate Transactions such as a merger or acquisition',
+        'Marketing Partners (only with your explicit consent) We do not sell your personal data.',
+      ],
+    },
+  },
+  {
+    question: 'Data Retention',
+    answer: {
+      response:
+        'We retain personal data only as long as necessary for the list below. Data no longer needed is securely deleted or anonymized :',
+      description: [
+        'Service delivery',
+        'Compliance with laws (e.g., tax, AML)',
+        'Defense against legal claims',
+        'Recordkeeping, auditing, and analytics',
+      ],
+    },
+  },
+  {
+    question: 'Your Rights and Choices',
+    answer: {
+      response: 'To exercise these rights, email us at: privacy@xafpay.com',
+      description: [
+        'Access, correct, or delete your personal information',
+        'Object to or restrict certain types of processing',
+        'Withdraw consent at any time',
+        'Deactivate your account',
+        'Opt out of marketing communications',
+      ],
+    },
+  },
+  {
+    question: 'Security of Your Information',
+    answer: {
+      response:
+        'We use reasonable administrative, technical, and physical safeguards, including:',
+      description: ['Encrypted transmissions and storage'],
+    },
+  },
+];
+
+export const privacyPolicyFr: IFaqQuestions[] = [
+  {
+    question: 'Portée et Applicabilité',
+    answer: {
+      response:
+        "Cette Politique s'applique aux données personnelles collectées lorsque vous :",
+      description: [
+        'Utilisez notre site web (www.xafpay.com) ou application mobile',
+        'Vous inscrivez, effectuez des transactions ou communiquez avec nous',
+        'Interagissez avec nous par email, téléphone ou canaux de support',
+        "Collaborez avec nous via des services tiers ou des recommandations. Elle s'applique aux interactions en ligne et hors ligne",
+      ],
+    },
+  },
+  {
+    question: 'Informations que nous Collectons',
+    answer: {
+      response: 'Informations que vous fournissez directement :',
+      description: [
+        'Nom complet, date de naissance, nationalité',
+        'Adresse, numéro de téléphone, adresse email',
+        "Pièce d'identité gouvernementale, numéro de sécurité sociale (si requis)",
+        'Informations bancaires ou de carte, détails des transactions',
+        "Photo et vérification d'identité (ex : selfie avec pièce d'identité)",
+        'Communications et interactions avec le support',
+        'Informations sur les bénéficiaires :',
+        'Nom du bénéficiaire, coordonnées et informations bancaires',
+        'Objet du paiement',
+        'Accès facultatif à votre liste de contacts (avec consentement)',
+        'Sources tierces :',
+        "Fournisseurs d'authentification (ex : Google, Apple)",
+        "Partenaires de recommandation et services d'enrichissement de données",
+        'Réseaux sociaux et plateformes marketing',
+        'Fournisseurs AML/KYC',
+        'Données collectées automatiquement :',
+        "Informations sur l'appareil (navigateur, OS, adresse IP)",
+        "Modèles d'utilisation de l'application et du site web",
+        'Cookies et données de suivi (voir Politique des Cookies)',
+      ],
+    },
+  },
+  {
+    question: 'Comment nous Utilisons vos Informations',
+    answer: {
+      response: '',
+      description: [
+        'Fournir nos Services, y compris les paiements transfrontaliers, services de portefeuille et traitement des transactions',
+        'Authentifier les utilisateurs et se conformer aux obligations AML/CFT',
+        'Fournir un support et répondre aux demandes',
+        "Améliorer et personnaliser l'expérience utilisateur",
+        'Effectuer des analyses, améliorer les services et développer de nouvelles fonctionnalités',
+        'Détecter et prévenir les fraudes ou activités non autorisées',
+        'Remplir les obligations légales et contractuelles',
+        'Envoyer des communications de service et du contenu marketing (avec droit de désinscription)',
+      ],
+    },
+  },
+  {
+    question: 'Partage de vos Informations',
+    answer: {
+      response: '',
+      description: [
+        "Prestataires de services (ex : banques, services de vérification d'identité, fournisseurs d'infrastructure)",
+        "Régulateurs et forces de l'ordre lorsque requis par la loi applicable ou ordonnance du tribunal",
+        'Partenaires commerciaux pour le traitement des transactions ou services co-brandés',
+        "Filiales et transactions d'entreprise comme une fusion ou acquisition",
+        'Partenaires marketing (uniquement avec votre consentement explicite). Nous ne vendons pas vos données personnelles.',
+      ],
+    },
+  },
+  {
+    question: 'Conservation des Données',
+    answer: {
+      response:
+        'Nous conservons les données personnelles seulement aussi longtemps que nécessaire pour les finalités ci-dessous. Les données non nécessaires sont supprimées ou anonymisées de manière sécurisée :',
+      description: [
+        'Fourniture des services',
+        'Conformité aux lois (ex : fiscales, AML)',
+        'Défense contre des réclamations légales',
+        'Tenue de registres, audit et analyses',
+      ],
+    },
+  },
+  {
+    question: 'Vos Droits et Choix',
+    answer: {
+      response:
+        'Pour exercer ces droits, contactez-nous à : privacy@xafpay.com',
+      description: [
+        'Accéder, corriger ou supprimer vos informations personnelles',
+        'Vous opposer ou limiter certains types de traitement',
+        'Retirer votre consentement à tout moment',
+        'Désactiver votre compte',
+        'Vous désinscrire des communications marketing',
+      ],
+    },
+  },
+  {
+    question: 'Sécurité de vos Informations',
+    answer: {
+      response:
+        'Nous utilisons des mesures de protection administratives, techniques et physiques raisonnables, notamment :',
+      description: ['Transmissions et stockage chiffrés'],
+    },
+  },
+];

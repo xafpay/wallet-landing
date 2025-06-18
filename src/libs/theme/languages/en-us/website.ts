@@ -261,13 +261,13 @@ export const website = {
   faq: 'FAQs',
   howItWorksStep1: 'Register',
   howItWorksStep1Description:
-    'Start by creating a Xafpay account in just a few minutes. Sign up by using your email or phone number.',
+    'Create and Account with your email, phone number, and personal details',
   howItWorksStep2: 'Complete KYC',
   howItWorksStep2Description:
-    'Enter your persona details, upload identity document and verify your account',
+    'Upload your document, verify your identity and fund your account',
   howItWorksStep3: 'Pay securely',
   howItWorksStep3Description:
-    'Link your bank account, fund account, enter recipient information and transfer money',
+    'Enter your recipient information and transfer money',
   remittanceSolutionOnHand: 'Your money transfer solution at hand',
   qrCodeEngagement:
     'Get instant access to all your financial services by scanning the QR code below.',
@@ -346,4 +346,6 @@ export const website = {
   termsAndConditionDescription: `Welcome to Xafpay. These Terms and Conditions ("Terms") govern your access to and use of the Xafpay mobile application, website, and related services (collectively, the “Platform”) provided by XAFPAY LLC (“Xafpay,” “we,” “us,” or “our”). By using the Platform, you agree to be bound by these Terms. If you do not agree, do not use the Platform.`,
   En: 'En',
   Fr: 'Fr',
+  privacyPolicyDescription:
+    'This Privacy Policy describes how XAFPAY LLC (“Xafpay,” “we,” “our,” or “us”) collects, uses, discloses, and safeguards personal information through our mobile app, website, and related financial services (collectively, the “Services”). This Policy applies to all users in the United States and reflects our commitment to privacy, transparency, and compliance with applicable federal and state privacy laws.',
 };
