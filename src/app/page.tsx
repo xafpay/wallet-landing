@@ -10,7 +10,8 @@ import {
   LocationSection,
   PageLayout,
   PaymentMethods,
-  TrustSection
+  TrustSection,
+  WhatsAppButton
 } from '@components';
 
 
@@ -27,6 +28,7 @@ export default function Index() {
       <PaymentMethods />
       <Cta />
       <FAQ />
+      <WhatsAppButton />
     </PageLayout>
   );
 }
