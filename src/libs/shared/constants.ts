@@ -1,4 +1,4 @@
-import { IFaqQuestions } from './interface';
+import { IFaqQuestions } from '../types/interface';
 
 export const faqQuestionsEn: IFaqQuestions[] = [
   {
@@ -6,7 +6,7 @@ export const faqQuestionsEn: IFaqQuestions[] = [
     answer: {
       response: 'Please follow these steps to send money from the USA :',
       description: [
-        'Sign uo or log in to Xafpay',
+        'Sign up or log in to Xafpay',
         'Complete your KYC verification',
         'Link your bank account and fund account',
         "Enter recipient's detail and initiate transfer",
@@ -31,7 +31,7 @@ export const faqQuestionsEn: IFaqQuestions[] = [
     question: 'Can I send money anytime?',
     answer: {
       response:
-        'yes Xafpay operates 24/7 including weekends and public holidays',
+        'Yes Xafpay operates 24/7 including weekends and public holidays',
     },
   },
   {
@@ -44,7 +44,7 @@ export const faqQuestionsEn: IFaqQuestions[] = [
   {
     question: 'What are your transfer fees?',
     answer: {
-      response: 'Zafpay offers zero transaction fees',
+      response: 'Xafpay offers zero transaction fees',
     },
   },
   {
