@@ -8,12 +8,32 @@ html {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
   font-family: 'Poppins', 'Space Grotesk', 'Darker Grotesque', sans-serif !important;
   background-color: var(--color-background);
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
+/* Responsive Typography */
+html {
+  font-size: 16px; /* Base font size */
+}
+
+@media (max-width: 768px) { /* Tablet */
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  html {
+    font-size: 14px;
+  }
+}
+
 
 .container--x {
   width: 100%;
