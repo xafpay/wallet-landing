@@ -12,16 +12,21 @@ import {
 } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
+import anime from 'animejs';
 import { useCurrencies } from 'api/hooks/useCurrency';
+import Lottie from 'lottie-react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
+// Assuming you have a Lottie JSON animation file in your public folder
+import animationData from '../../../public/assets/animation.json';
 
 
 export function Hero() {
   const { formatMessage, formatNumber } = useIntl();
   const theme = useTheme();
+  const heroRef = useRef(null);
 
   const [amount, setAmount] = useState<number | string>(1);
   const [currencyAnchorEl, setCurrencyAnchorEl] = useState<null | HTMLElement>(
@@ -39,6 +44,16 @@ export function Hero() {
 
   useEffect(() => {
     setActiveCurrency(currencies?.[0]);
+    // Animate the hero section on mount
+    if (heroRef.current) {
+      anime({
+        targets: heroRef.current,
+        opacity: [0, 1],
+        translateY: [50, 0],
+        duration: 1000,
+        easing: 'easeOutExpo',
+      });
+    }
   }, [currencies]);
 
   /* Handle amount by checking if number value has been typed 
@@ -62,6 +77,7 @@ export function Hero() {
         selectItem={setActiveCurrency}
       />
       <Box
+        ref={heroRef} // Add ref for animejs
         sx={{
           display: 'grid',
           gridTemplateColumns: {
@@ -69,38 +85,41 @@ export function Hero() {
             tablet: 'repeat(2, 1fr)',
           },
           gridTemplateRows: {
-            mobile: '1fr 1fr',
+            mobile: 'auto auto auto', // Adjust for Lottie animation
             tablet: 'auto auto',
           },
           padding: {
-            mobile: '0px 16px 40px',
+            mobile: '20px 16px 40px', // Adjusted padding for mobile
             tablet: '100px 80px'
           },
           bgcolor: 'rgba(250, 250, 253, 1)',
-          rowGap: 4
+          rowGap: { mobile: 3, tablet: 4 } // Adjusted rowGap for mobile
         }}
       >
         <Box
           sx={{
             display: 'grid',
-            textAlign: 'start',
-            rowGap: 4,
+            textAlign: { mobile: 'center', tablet: 'start' }, // Center text on mobile
+            rowGap: { mobile: 2, tablet: 4 }, // Adjusted rowGap for mobile
             alignSelf: 'center',
+            order: { mobile: 2, tablet: 1 } // Change order on mobile
           }}
         >
           <Box sx={{
             display: 'flex',
             flexWrap: 'wrap',
+            justifyContent: { mobile: 'center', tablet: 'flex-start' }, // Center heading on mobile
             columnGap: 1
           }}>
             <Typography
               variant="h1"
+              className="hero-title" // Add class for animejs
               sx={{
                 fontFamily: 'Space Grotesk',
                 fontWeight: 'bold',
                 fontSize: {
+                  mobile: '28px', // Adjusted font size for mobile
                   tablet: '48px',
-                  mobile: '36px',
                 },
                 lineHeight: '120%',
                 color: '#0E103A',
@@ -110,12 +129,13 @@ export function Hero() {
             </Typography>
             <Typography
               variant="h1"
+              className="hero-title" // Add class for animejs
               sx={{
                 fontFamily: 'Space Grotesk',
                 fontWeight: 'bold',
                 fontSize: {
+                  mobile: '28px', // Adjusted font size for mobile
                   tablet: '48px',
-                  mobile: '36px',
                 },
                 lineHeight: '120%',
                 color: theme.palette.secondary.main,
@@ -125,12 +145,13 @@ export function Hero() {
             </Typography>
             <Typography
               variant="h1"
+              className="hero-title" // Add class for animejs
               sx={{
                 fontFamily: 'Space Grotesk',
                 fontWeight: 'bold',
                 fontSize: {
+                  mobile: '28px', // Adjusted font size for mobile
                   tablet: '48px',
-                  mobile: '36px',
                 },
                 lineHeight: '120%',
                 color: '#0E103A',
@@ -141,14 +162,16 @@ export function Hero() {
           </Box>
           <Typography
             variant="h2"
+            className="hero-subtitle" // Add class for animejs
             sx={{
               color: 'rgba(28, 29, 39, 0.80)',
               leadingTrim: 'both',
               textEdge: 'cap',
               fontFamily: 'Space Grotesk',
-              fontSize: { tablet: '24px', mobile: '16px' },
+              fontSize: { mobile: '14px', tablet: '24px' }, // Adjusted font size for mobile
               fontWeight: 500,
               lineHeight: '130%',
+              textAlign: { mobile: 'center', tablet: 'start' } // Center text on mobile
             }}
           >
             {formatMessage({ id: 'descriptionheroMessage' })}
@@ -160,7 +183,7 @@ export function Hero() {
               tablet: 'column'
             },
             justifyContent: {
-              mobile: 'normal',
+              mobile: 'center', // Center items on mobile
               tablet: 'flex-start'
             },
             alignItems: 'center',
@@ -171,6 +194,7 @@ export function Hero() {
               sx={{
                 fontFamily: 'Space Grotesk',
                 color: 'rgba(28, 29, 39, 0.80)',
+                fontSize: { mobile: '14px', tablet: 'inherit' } // Adjusted font size for mobile
               }}
             >
               {formatMessage({ id: 'doYouHaveAnAccount' })}
@@ -178,6 +202,7 @@ export function Hero() {
             <Button
               variant="contained"
               size="medium"
+              className="hero-button" // Add class for animejs
               sx={{
                 width: {
                   mobile: '100%',
@@ -195,18 +220,33 @@ export function Hero() {
           </Box>
         </Box>
 
+        {/* Lottie Animation - Placed above text on mobile */}
         <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            order: { mobile: 1, tablet: 2 }, // Change order on mobile
+            paddingBottom: { mobile: 2, tablet: 0 } // Add some space below animation on mobile
+          }}
+        >
+          <Lottie animationData={animationData} style={{ width: '100%', maxWidth: '300px', height: 'auto' }} />
+        </Box>
+
+        <Box
+          className="hero-form" // Add class for animejs
           sx={{
             display: 'grid',
             border: '1px solid darkgray',
             borderRadius: 3,
             boxShadow: {
-              mobile: '0px 10px 5px rgba(21, 124, 251, 0.3), 0px -10px 8px rgba(21, 124, 251, 0.3)',
+              mobile: '0px 5px 10px rgba(21, 124, 251, 0.2)', // Softer shadow for mobile
               tablet: '-40px -40px 8px rgba(21, 124, 251, 0.3), 0px 7px 8px rgba(251, 1, 2, 0.15)'
             },
-            maxWidth: '25rem',
+            maxWidth: { mobile: '100%', tablet: '25rem' }, // Full width on mobile
             backgroundColor: theme.palette.background.paper,
             justifySelf: 'center',
+            order: { mobile: 3, tablet: 3 } // Ensure form is last on mobile
           }}
         >
           <Box sx={{
@@ -224,6 +264,7 @@ export function Hero() {
                 fontFamily: 'Space Grotesk',
                 fontWeight: 600,
                 lineHeight: '130%',
+                fontSize: { mobile: '16px', tablet: 'inherit' } // Adjusted font size for mobile
               }}
             >
               {formatMessage({ id: 'feesRates' })}
@@ -235,6 +276,7 @@ export function Hero() {
                 fontFamily: 'Space Grotesk',
                 fontWeight: 600,
                 lineHeight: '130%',
+                fontSize: { mobile: '14px', tablet: 'inherit' } // Adjusted font size for mobile
               }}
             >
               {activeCurrency ?
@@ -246,8 +288,8 @@ export function Hero() {
           </Box>
           <Box sx={{
             display: 'grid',
-            rowGap: 2,
-            padding: '0 16px 16px'
+            rowGap: { mobile: 1.5, tablet: 2 }, // Adjusted rowGap for mobile
+            padding: { mobile: '12px', tablet: '0 16px 16px' } // Adjusted padding for mobile
           }}>
             <Divider />
             <Box
@@ -281,10 +323,10 @@ export function Hero() {
                   sx={{
                     '& .MuiInputBase-input': {
                       textAlign: 'start',
-                      fontSize: { tablet: '36px', mobile: '24px' },
+                      fontSize: { mobile: '20px', tablet: '36px' }, // Adjusted font size for mobile
                       fontWeight: '700',
                       fontFamily: 'Poppins',
-                      width: '15rem',
+                      width: { mobile: 'calc(100% - 70px)', tablet: '15rem' }, // Adjust width for mobile
                     },
                     '& .MuiInput-root::before': {
                       border: 'none',
@@ -319,7 +361,7 @@ export function Hero() {
                     variant="p1m"
                     sx={{
                       fontFamily: 'Space Grotesk',
-                      fontSize: { tablet: '24px', mobile: '14px' },
+                      fontSize: { mobile: '14px', tablet: '24px' }, // Adjusted font size for mobile
                       lineHeight: '130%',
                     }}
                   >
@@ -341,9 +383,9 @@ export function Hero() {
                 sx={{
                   backgroundColor: '#0E103A',
                   color: 'white',
-                  fontSize: '1.2rem',
-                  height: '36px',
-                  width: '36px',
+                  fontSize: '1rem', // Adjusted icon size
+                  height: '30px', // Adjusted chip size
+                  width: '30px',  // Adjusted chip size
                   '& .MuiChip-label': {
                     padding: 0,
                   },
@@ -386,7 +428,7 @@ export function Hero() {
                     variant="h3"
                     sx={{
                       textAlign: 'start',
-                      fontSize: { tablet: '36px', mobile: '24px' },
+                      fontSize: { mobile: '20px', tablet: '36px' }, // Adjusted font size for mobile
                       fontWeight: '700',
                       fontFamily: 'Poppins',
                     }}
@@ -417,7 +459,7 @@ export function Hero() {
                     sx={{
                       fontFamily: 'Space Grotesk',
                       fontWeight: 500,
-                      fontSize: { tablet: '24px', mobile: '14px' },
+                      fontSize: { mobile: '14px', tablet: '24px' }, // Adjusted font size for mobile
                       lineHeight: '130%',
                     }}
                   >
@@ -465,7 +507,7 @@ export function Hero() {
               color="primary"
               endIcon={<Icon icon={arrowRight} />}
               sx={{
-                fontSize: '1.2rem',
+                fontSize: { mobile: '1rem', tablet: '1.2rem'}, // Adjusted font size for mobile
                 fontWeight: 'bold',
                 fontFamily: 'Poppins',
                 width: '100%',
