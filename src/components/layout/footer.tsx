@@ -145,9 +145,9 @@ export default function Footer() {
             <Typography
               variant="l2r"
               component="a"
-              href="mailto:contact@xafpay.com"
+              href="mailto:support@xafpay.com"
             >
-              {formatMessage({ id: 'email' })}: contact@xafpay.com
+              {formatMessage({ id: 'email' })}: support@xafpay.com
             </Typography>
             <Typography variant="l2r">
               {formatMessage({ id: 'address' })}:
