@@ -472,7 +472,7 @@ export function Hero() {
               }}
               onClick={() =>
                 window.open(
-                  `${process.env.NEXT_PUBLIC_APP_URL}/amount=${amount}&currency=${activeCurrency?.currency}`,
+                  `${process.env.NEXT_PUBLIC_APP_URL}/remittance?amount=${amount}&currency=${activeCurrency?.currency}`,
                   '_blank'
                 )
               }
