@@ -14,7 +14,7 @@ import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
 import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
 import anime from 'animejs/lib/anime.es.js';
@@ -52,6 +52,24 @@ export function Hero() {
     }
     setAmount(value);
   }
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const shakeButtonTransfer = () => {
+      anime({
+        targets: buttonRef.current,
+        rotateZ: [-5, 5, -5, 5, 0], // Gentle tilt shake
+        duration: 1000,
+        easing: 'easeInOutSine',
+      });
+    };
+
+    shakeButtonTransfer();
+    const shakingInterval = setInterval(shakeButtonTransfer, 3000);
+
+    return () => clearInterval(shakingInterval);
+  }, []);
+
   return (
     <>
       <CurrencyMenu
@@ -447,6 +465,7 @@ export function Hero() {
             </Box>
             <Divider />
             <Button
+              ref={buttonRef}
               size="large"
               variant="contained"
               color="primary"
