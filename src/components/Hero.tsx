@@ -17,7 +17,8 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
-
+import anime from 'animejs/lib/anime.es.js';
+import { TypewriterText } from './typewriterText';
 
 export function Hero() {
   const { formatMessage, formatNumber } = useIntl();
@@ -108,21 +109,7 @@ export function Hero() {
             >
               {formatMessage({ id: 'heroMessage' })}
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{
-                fontFamily: 'Space Grotesk',
-                fontWeight: 'bold',
-                fontSize: {
-                  tablet: '48px',
-                  mobile: '36px',
-                },
-                lineHeight: '120%',
-                color: theme.palette.secondary.main,
-              }}
-            >
-              {formatMessage({ id: 'unbeatable' })}
-            </Typography>
+            <TypewriterText text={formatMessage({ id: 'unbeatable' })} />
             <Typography
               variant="h1"
               sx={{
