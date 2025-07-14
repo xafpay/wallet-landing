@@ -39,7 +39,7 @@ export function Hero() {
   };
 
   useEffect(() => {
-    setActiveCurrency(currencies?.[0]);
+    setActiveCurrency(currencies?.[1]);
   }, [currencies]);
 
   /* Handle amount by checking if number value has been typed 
