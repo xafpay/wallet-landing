@@ -1,14 +1,16 @@
 import { Box, Button, Typography } from '@mui/material';
 import { useTheme } from '@xafpay/theme';
+import { IAnimation } from '@xafpay/types';
 import { useIntl } from 'react-intl';
 
-export function Cta() {
+export function Cta(animation: IAnimation) {
   const { formatMessage } = useIntl();
   const theme = useTheme();
 
   return (
     <Box
       sx={{
+        ...animation,
         height: '372px',
         background: `url('/assets/mobileTransaction.jpg')`,
         backgroundSize: 'cover',

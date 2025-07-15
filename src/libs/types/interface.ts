@@ -27,3 +27,8 @@ interface IResponse {
   response: string;
   description?: string[];
 }
+
+export interface IAnimation {
+  animation: string;
+  animationTimeline?: string;
+}

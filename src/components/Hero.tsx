@@ -14,10 +14,11 @@ import { useTheme } from '@xafpay/theme';
 import { CurrencyEntity } from '@xafpay/types';
 import { useCurrencies } from 'api/hooks/useCurrency';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useIntl } from 'react-intl';
 import CurrencyMenu from './currencyMeny';
-
+import anime from 'animejs/lib/anime.es.js';
+import { TypewriterText } from './typewriterText';
 
 export function Hero() {
   const { formatMessage, formatNumber } = useIntl();
@@ -38,7 +39,7 @@ export function Hero() {
   };
 
   useEffect(() => {
-    setActiveCurrency(currencies?.[0]);
+    setActiveCurrency(currencies?.[1]);
   }, [currencies]);
 
   /* Handle amount by checking if number value has been typed 
@@ -51,6 +52,24 @@ export function Hero() {
     }
     setAmount(value);
   }
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const shakeButtonTransfer = () => {
+      anime({
+        targets: buttonRef.current,
+        rotateZ: [-5, 5, -5, 5, 0], // Gentle tilt shake
+        duration: 1000,
+        easing: 'easeInOutSine',
+      });
+    };
+
+    shakeButtonTransfer();
+    const shakingInterval = setInterval(shakeButtonTransfer, 3000);
+
+    return () => clearInterval(shakingInterval);
+  }, []);
+
   return (
     <>
       <CurrencyMenu
@@ -108,21 +127,7 @@ export function Hero() {
             >
               {formatMessage({ id: 'heroMessage' })}
             </Typography>
-            <Typography
-              variant="h1"
-              sx={{
-                fontFamily: 'Space Grotesk',
-                fontWeight: 'bold',
-                fontSize: {
-                  tablet: '48px',
-                  mobile: '36px',
-                },
-                lineHeight: '120%',
-                color: theme.palette.secondary.main,
-              }}
-            >
-              {formatMessage({ id: 'unbeatable' })}
-            </Typography>
+            <TypewriterText text={formatMessage({ id: 'unbeatable' })} />
             <Typography
               variant="h1"
               sx={{
@@ -460,6 +465,7 @@ export function Hero() {
             </Box>
             <Divider />
             <Button
+              ref={buttonRef}
               size="large"
               variant="contained"
               color="primary"

@@ -1,13 +1,15 @@
 import { Box, Typography } from '@mui/material';
+import { IAnimation } from '@xafpay/types';
 import Image from 'next/image';
 import { QRCodeSVG } from 'qrcode.react';
 import { useIntl } from 'react-intl';
 
-export function ContactUsSection() {
+export function ContactUsSection(animation: IAnimation) {
   const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
+        ...animation,
         display: 'grid',
         gridTemplateColumns: { mobile: 'none', tablet: '1fr auto' },
         justifyContent: 'center',
