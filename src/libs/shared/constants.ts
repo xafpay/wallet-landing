@@ -59,9 +59,9 @@ export const faqQuestionsEn: IFaqQuestions[] = [
     answer: {
       response: 'Our transfer limit is set as follow :',
       description: [
-        'Maximum per transaction  XAF 1,000,000',
-        'Minimum per transaction $10',
         'Daily limit $2,999',
+        'Minimum per transaction $10',
+        'Maximum per transaction  XAF 1,000,000',
       ],
     },
   },
@@ -134,9 +134,9 @@ export const faqQuestionsFr: IFaqQuestions[] = [
     answer: {
       response: 'Nos limites de transfert sont les suivantes :',
       description: [
+        'Limite quotidienne $2,999',
         'Montant maximum par transaction  XAF 1,000,000',
         'Montant minimum par transaction $10',
-        'Montant maximum journaliere $2,999',
       ],
     },
   },
