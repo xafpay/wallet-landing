@@ -59,8 +59,9 @@ export const faqQuestionsEn: IFaqQuestions[] = [
     answer: {
       response: 'Our transfer limit is set as follow :',
       description: [
-        'Without SSN: $2,999 per transfer/day, $15,000/week.',
-        'With SSN: $5,000 per transfer/day, $15,000/week.',
+        'Daily limit $2,999',
+        'Minimum per transaction $10',
+        'Maximum per transaction  XAF 1,000,000',
       ],
     },
   },
@@ -133,8 +134,9 @@ export const faqQuestionsFr: IFaqQuestions[] = [
     answer: {
       response: 'Nos limites de transfert sont les suivantes :',
       description: [
-        'Sans SSN : 2 999 $ par transfert/jour, 15 000 $/semaine.',
-        'Avec SSN : 5 000 $ par transfert/jour, 15 000 $/semaine.',
+        'Limite quotidienne $2,999',
+        'Montant minimum par transaction $10',
+        'Montant maximum par transaction  XAF 1,000,000',
       ],
     },
   },
