@@ -136,7 +136,7 @@ export const faqQuestionsFr: IFaqQuestions[] = [
       description: [
         'Montant maximum par transaction  XAF 1,000,000',
         'Montant minimum par transaction $10',
-        'Montant maximum journaliere $2,999',
+        'Montant maximum journalier $2,999',
       ],
     },
   },
